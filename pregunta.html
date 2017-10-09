@@ -38,7 +38,7 @@
 		<label>Respueta incorrecta 2:</label><input type="text" name="respI2" id="respI2"><br>
 		<label>Respueta incorrecta 3:</label><input type="text" name="respI3" id="respI3"><br>
 		<br>
-		<label>Complejidad:</label><input type="text" name="comp" id="comp"><br>
+		<label>Complejidad:</label><input type="text" name="comp" id="compl"><br>
 		<label>Tema de la pregunta:</label><input type="text" name="tema" id="tema">
 		<br>
     <input type="button" id="btn" value="Validar">
@@ -60,8 +60,41 @@
 
 
   $("#btn").click(function(){
-    validateEmail();
-    requiredField("preg")
+
+
+
+    if (!requiredField("email")) {
+      alert("Introuce un email")
+    }else if(!validateEmail()){
+      alert("Introduce un email valido")
+    }else if (!requiredField("preg") ) {
+        alert("Introduce una pregunta")
+    }else if (!validarPregunta()) {
+      alert("Introduce una pregunta de al menos 10 caracteres")
+    }else if (!requiredField("respC")) {
+        alert("Introduce una respuesta correcta")
+    }else if (!requiredField("respI1")) {
+        alert("Campo Respuesta 1 requerido")
+    }else if (!requiredField("respI2")) {
+        alert("Campo Respuesta2 requerido")
+    }else if (!requiredField("respI3")) {
+        alert("Campo respuesta 3 requerido")
+    }else if (!requiredField("compl")) {
+      alert("Introduce una cmplejidad")
+    }else if (!validarCompl()) {
+      alert("Introduce un numero entre el 1 y el 5")
+    }else if (!requiredField("tema")) {
+      alert("Introduce un tema")
+    }
+
+
+
+
+
+
+
+
+
 
 
   });
@@ -71,16 +104,42 @@ function validateEmail(){
   var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|ehu]");
   var rta=er1.test(email);
   console.log(rta)
+  //alert("Email no valido")
+  return rta;
 
 }
 
 function requiredField(id){
   var var1=$("#"+id).val();
   if (var1=="") {
+    //alert("Campo obligatorio: "+id)
     console.log("FAIL")
+    return false;
 
   }else {
     console.log("OK")
+    return true;
+  }
+
+}
+
+function validarPregunta(){
+  var pregunta =$("#preg").val();
+  if (pregunta.length<10) {
+    return false;
+
+  }else {
+    return true;
+  }
+}
+
+function validarCompl(){
+  var compl=$("#compl").val();
+  if (compl>=1 && compl <=5) {
+    return true;
+  } else {
+  //  alert("Introduce un numero entre 1 y 5")
+    return false;
   }
 
 }

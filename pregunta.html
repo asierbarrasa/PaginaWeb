@@ -59,32 +59,47 @@
 
 
 
-  $("#btn").click(function(){
+  //$("#btn").click(function(){
 
-
+  $("#fpreguntas").submit(function(){
+    
 
     if (!requiredField("email")) {
       alert("Introuce un email")
+      event.preventDefault();
     }else if(!validateEmail()){
       alert("Introduce un email valido")
+      event.preventDefault();
     }else if (!requiredField("preg") ) {
         alert("Introduce una pregunta")
+        event.preventDefault();
     }else if (!validarPregunta()) {
       alert("Introduce una pregunta de al menos 10 caracteres")
+      event.preventDefault();
     }else if (!requiredField("respC")) {
         alert("Introduce una respuesta correcta")
+        event.preventDefault();
     }else if (!requiredField("respI1")) {
         alert("Campo Respuesta 1 requerido")
+        event.preventDefault();
     }else if (!requiredField("respI2")) {
         alert("Campo Respuesta2 requerido")
+        event.preventDefault();
     }else if (!requiredField("respI3")) {
         alert("Campo respuesta 3 requerido")
+        event.preventDefault();
     }else if (!requiredField("compl")) {
       alert("Introduce una cmplejidad")
+      event.preventDefault();
     }else if (!validarCompl()) {
       alert("Introduce un numero entre el 1 y el 5")
+      event.preventDefault();
     }else if (!requiredField("tema")) {
       alert("Introduce un tema")
+      event.preventDefault();
+    }else {
+      return;
+
     }
 
 

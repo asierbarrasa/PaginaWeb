@@ -28,7 +28,6 @@
 		<span><a href='creditos.html'>Creditos</a></spam>
 	</nav>
     <section class="main" id="s1">
-
 	<div>
 	<form id="fpreguntas" name="fpreguntas" action = "prueba.php">
 		<label>Dirección de correo:</label><input type="text" name="email" id="email"><br>
@@ -57,7 +56,6 @@
 <script>
 
   $("#fpreguntas").submit(function(){
-
     if (!requiredField("email")) {
       alert("Introuce un email")
       event.preventDefault();
@@ -102,7 +100,6 @@ function validateEmail(){
   var rta=er1.test(email);
   console.log(rta)
   return rta;
-
 }
 
 function requiredField(id){

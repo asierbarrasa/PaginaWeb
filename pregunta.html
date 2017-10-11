@@ -41,7 +41,6 @@
 		<label>Complejidad:</label><input type="text" name="comp" id="compl"><br>
 		<label>Tema de la pregunta:</label><input type="text" name="tema" id="tema">
 		<br>
-    <input type="button" id="btn" value="Validar">
   <input type="submit" id="boton">
 	</form>
 
@@ -57,12 +56,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
 
-
-
-  //$("#btn").click(function(){
-
   $("#fpreguntas").submit(function(){
-    
 
     if (!requiredField("email")) {
       alert("Introuce un email")
@@ -99,19 +93,7 @@
       event.preventDefault();
     }else {
       return;
-
     }
-
-
-
-
-
-
-
-
-
-
-
   });
 
 function validateEmail(){
@@ -119,7 +101,6 @@ function validateEmail(){
   var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|ehu]");
   var rta=er1.test(email);
   console.log(rta)
-  //alert("Email no valido")
   return rta;
 
 }
@@ -127,22 +108,18 @@ function validateEmail(){
 function requiredField(id){
   var var1=$("#"+id).val();
   if (var1=="") {
-    //alert("Campo obligatorio: "+id)
     console.log("FAIL")
     return false;
-
   }else {
     console.log("OK")
     return true;
   }
-
 }
 
 function validarPregunta(){
   var pregunta =$("#preg").val();
   if (pregunta.length<10) {
     return false;
-
   }else {
     return true;
   }
@@ -153,10 +130,8 @@ function validarCompl(){
   if (compl>=1 && compl <=5) {
     return true;
   } else {
-  //  alert("Introduce un numero entre 1 y 5")
     return false;
   }
-
 }
 
 </script>

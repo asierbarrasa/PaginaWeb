@@ -45,6 +45,7 @@
 		<label>Tema de la pregunta * :</label><input type="text" name="tema" id="tema">
 		<br>
     <label>Imagen:</label><input id="fileInput" type="file" size="50">
+    <img id="imgFinal" width="100%" height="100%" >
     <br>
   <input type="submit" id="boton">
 	</form>
@@ -107,11 +108,8 @@
       var origen,tipo;
       origen = e.target;
 			$('#imagen').attr('src', origen.result)
-
     };
       reader.readAsDataURL(exp[0]);
-
-
   });
 
 function validateEmail(){

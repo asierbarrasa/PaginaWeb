@@ -40,11 +40,11 @@
 		<label>Respueta incorrecta 2 * :</label><input type="text" name="respI2" id="respI2"><br>
 		<label>Respueta incorrecta 3 * :</label><input type="text" name="respI3" id="respI3"><br>
 		<br>
+    <img src="" id="imagen">
 		<label>Complejidad * :</label><input type="text" name="comp" id="compl"><br>
 		<label>Tema de la pregunta * :</label><input type="text" name="tema" id="tema">
 		<br>
     <label>Imagen:</label><input id="fileInput" type="file" size="50">
-    <img src="" id="imagen">
     <br>
   <input type="submit" id="boton">
 	</form>
@@ -100,10 +100,17 @@
     }
   });
   $("#fileInput").change(function(){
-    var exp = $("#fileInput").val();
+    var exp = $("#fileInput")[0].files;
     console.log(exp);
-    var ht = "<img src = ./download.jpg>";
-    $("#imagen").attr("src",exp);
+    var reader = new FileReader();
+    reader.onloadend = function(e){
+      var origen,tipo;
+      origen = e.target;
+			$('#imagen').attr('src', origen.result)
+
+    };
+      reader.readAsDataURL(exp[0]);
+
 
   });
 

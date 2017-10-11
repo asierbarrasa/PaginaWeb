@@ -35,14 +35,16 @@
 	<form id="fpreguntas" name="fpreguntas" action = "prueba.php">
 		<label>Dirección de correo:</label><input type="text" name="email" id="email"><br>
 		<label>Enunciado de la pregunta:</label><input type="text" name="preg" id="preg"><br>
-		<label>Respuesta correcta:</label><input type="text" name="respC" id="respC"><br>
-		<label>Respueta incorrecta 1:</label><input type="text" name="respI1" id="respI1"><br>
-		<label>Respueta incorrecta 2:</label><input type="text" name="respI2" id="respI2"><br>
-		<label>Respueta incorrecta 3:</label><input type="text" name="respI3" id="respI3"><br>
+		<label>Respuesta correcta * :</label><input type="text" name="respC" id="respC"><br>
+		<label>Respueta incorrecta 1 * :</label><input type="text" name="respI1" id="respI1"><br>
+		<label>Respueta incorrecta 2 * :</label><input type="text" name="respI2" id="respI2"><br>
+		<label>Respueta incorrecta 3 * :</label><input type="text" name="respI3" id="respI3"><br>
 		<br>
-		<label>Complejidad:</label><input type="text" name="comp" id="compl"><br>
-		<label>Tema de la pregunta:</label><input type="text" name="tema" id="tema">
+		<label>Complejidad * :</label><input type="text" name="comp" id="compl"><br>
+		<label>Tema de la pregunta * :</label><input type="text" name="tema" id="tema">
 		<br>
+    <label>Imagen:</label><input id="fileInput" type="file" size="50">
+    <img src="" id="imagen">
     <br>
   <input type="submit" id="boton">
 	</form>
@@ -96,6 +98,13 @@
     }else {
       return;
     }
+  });
+  $("#fileInput").change(function(){
+    var exp = $("#fileInput").val();
+    console.log(exp);
+    var ht = "<img src = ./download.jpg>";
+    $("#imagen").attr("src",exp);
+
   });
 
 function validateEmail(){

@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","*******","id2921858_quiz");
 $sql = "INSERT INTO Pregunta(email, enunciado, respCorrecta, respInc1, respInc2"
 .", respInc3, complejidad, tema) VALUES ('$_POST[email]', '$_POST[preg]'".
 ", '$_POST[respC]', '$_POST[respI1]', '$_POST[respI2]', '$_POST[respI3]'".

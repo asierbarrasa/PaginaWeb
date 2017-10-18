@@ -32,7 +32,7 @@
 
 
 	<div>
-	<form id="fpreguntas" name="fpreguntas" action = "prueba.php">
+	<form id="fpreguntas" name="fpreguntas" action = "php/InsertarPregunta.php" method="post">
 		<label>Dirección de correo * :</label><input type="text" name="email" id="email"><br>
 		<label>Enunciado de la pregunta * :</label><input type="text" name="preg" id="preg"><br>
 		<label>Respuesta correcta * :</label><input type="text" name="respC" id="respC"><br>
@@ -46,7 +46,7 @@
 		<label>Complejidad * :</label><input type="text" name="comp" id="compl"><br>
 		<label>Tema de la pregunta * :</label><input type="text" name="tema" id="tema">
 		<br>
-    <label>Imagen:</label><input id="fileInput" type="file" size="50">
+    <label>Imagen:</label><input id="fileInput" type="file" size="50" name="imagen">
     <br>
   <input type="submit" id="boton">
 	</form>

@@ -28,10 +28,10 @@
 	<div>
 	<form id="fpreguntas" name="fpreguntas" action = "php/InsertarPregunta.php" method="post" enctype="multipart/form-data">
 		<label>Dirección de correo * :</label><input type="email" name="email" id="email" required><br>
-		<label>Nombre * :</label><input type="text" name="preg" id="preg" required><br>
-		<label>Apellido * :</label><input type="text" name="respC" id="respC" required><br>
-		<label>Contraseña * :</label><input type="password" name="pass1" id="pass1" required><br>
-    <label>Repetir contraseña * :</label><input type="password" name="pass2" id="pass2" required><br>
+		<label>Nombre * :</label> <input type="text" name="nombre" id="nombre" required><br>
+		<label>Apellido * :</label> <input type="text" name="apellido" id="apellido" required><br>
+		<label>Contraseña * :</label> <input type="password" name="pass1" id="pass1" required><br>
+    <label>Repetir contraseña * :</label> <input type="password" name="pass2" id="pass2" required><br>
 
     <br>
 		<br>
@@ -59,95 +59,6 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>
 
-  $("#fpreguntas").submit(function(){
-    if (!requiredField("email")) {
-      alert("Introuce un email")
-      event.preventDefault();
-    }else if(!validateEmail()){
-      alert("Introduce un email valido")
-      event.preventDefault();
-    }else if (!requiredField("preg") ) {
-        alert("Introduce una pregunta")
-        event.preventDefault();
-    }else if (!validarPregunta()) {
-      alert("Introduce una pregunta de al menos 10 caracteres")
-      event.preventDefault();
-    }else if (!requiredField("respC")) {
-        alert("Introduce una respuesta correcta")
-        event.preventDefault();
-    }else if (!requiredField("respI1")) {
-        alert("Campo Respuesta 1 requerido")
-        event.preventDefault();
-    }else if (!requiredField("respI2")) {
-        alert("Campo Respuesta2 requerido")
-        event.preventDefault();
-    }else if (!requiredField("respI3")) {
-        alert("Campo respuesta 3 requerido")
-        event.preventDefault();
-    }else if (!requiredField("compl")) {
-      alert("Introduce una cmplejidad")
-      event.preventDefault();
-    }else if (!validarCompl()) {
-      alert("Introduce un numero entre el 1 y el 5")
-      event.preventDefault();
-    }else if (!requiredField("tema")) {
-      alert("Introduce un tema")
-      event.preventDefault();
-    }else {
-      return;
-    }
-  });
-  $("#fileInput").change(function(){
-    var exp = $("#fileInput")[0].files;
-    console.log(exp);
-    var reader = new FileReader();
-    reader.onloadend = function(e){
-      var origen,tipo;
-      origen = e.target;
-			$('#imagen').attr('src', origen.result)
-    };
-      reader.readAsDataURL(exp[0]);
-  });
-
-function validateEmail(){
-  var email=$("#email").val();
-  var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|ehu]");
-  var rta=er1.test(email);
-  console.log(rta)
-  return rta;
-}
-
-function requiredField(id){
-  var var1=$("#"+id).val();
-  if (var1=="") {
-    console.log("FAIL")
-    return false;
-  }else {
-    console.log("OK")
-    return true;
-  }
-}
-
-function validarPregunta(){
-  var pregunta =$("#preg").val();
-  if (pregunta.length<10) {
-    return false;
-  }else {
-    return true;
-  }
-}
-
-function validarCompl(){
-  var compl=$("#compl").val();
-  if (compl>=1 && compl <=5) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-</script>
 </body>
 </html>

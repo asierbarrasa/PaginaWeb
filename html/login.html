@@ -23,6 +23,8 @@
 		<span><a href='pregunta.html'>Preguntas</a></spam>
 		<span><a href='creditos.html'>Creditos</a></spam>
 	</nav>
+
+  
     <section class="main" id="s1">
 
 	<div>
@@ -48,8 +50,6 @@
 
   </div>
 	</div>
-
-
     </section>
 	<footer class='main' id='f1'>
 		<p><a href="http://es.wikipedia.org/wiki/Quiz" target="_blank">Que es un Quiz?</a></p>
@@ -59,6 +59,65 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+$("#fpreguntas").submit(function(){
+  if (!requiredField("email")) {
+    alert("Introuce un email")
+    event.preventDefault();
+  }else if(!validateEmail()){
+    alert("Introduce un email valido")
+    event.preventDefault();
+  }else if (!requiredField("nombre") ) {
+      alert("Introduce tu nombre")
+      event.preventDefault();
+  }else if (!requiredField("apellido")) {
+      alert("Introduce tu apellido")
+      event.preventDefault();
+  }else if (!requiredField("pass1")) {
+      alert("Campo Respuesta 1 requerido")
+      event.preventDefault();
+  }else if (!requiredField("pass2")) {
+      alert("Campo Respuesta2 requerido")
+      event.preventDefault();
+  }else if (!validarPassword()) {
+    alert("Las contraseñas no coinciden")
+  }else {
+    return;
+  }
+});
 
+
+function validateEmail(){
+var email=$("#email").val();
+var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|ehu]");
+var rta=er1.test(email);
+console.log(rta)
+return rta;
+}
+
+function requiredField(id){
+var var1=$("#"+id).val();
+if (var1=="") {
+  console.log("FAIL")
+  return false;
+}else {
+  console.log("OK")
+  return true;
+}
+}
+
+function validarPassword(){
+  var pass1 = $("#pass1").val();
+  var pass2 = $("#pass2").val();
+
+  if (pass1==pass2) {
+    return true;
+  }else {
+    return false;
+  }
+}
+
+
+</script>
 </body>
 </html>

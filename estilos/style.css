@@ -5,7 +5,50 @@
 }
 
 body {
-  font: 16px Georgia, serif;
+  font: 15px Verdana, serif;
+}
+
+section{
+  border: 1px solid black;
+}
+
+
+input{
+  width: 30%;
+  border: none;
+  border: 1px solid black;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+.hola {
+  color: orange;
+}
+
+input[type="submit"]{
+
+  padding: 8px;
+
+}
+
+input[type="submit"]:hover{
+  background: rgb(21, 88, 67);
+  cursor: pointer;
+
+}
+
+input:focus{
+  border: 2px solid rgb(9, 95, 208);
+}
+
+label{
+
+  display: block;
+  width: 100%;
+  font-size: : 15px;
+  font-family: Courier, monospace;
+  margin-bottom: 5px;
+
 }
 
 #page-wrap {
@@ -14,7 +57,7 @@ body {
 }
 
 #page-wrap>.main {
-  border: 1px solid #999;
+  border: 1px solid #ccc;
   padding: 1%;
   margin-bottom: 1px;
   color: black;
@@ -25,12 +68,12 @@ section>div {
 }
 
 header, nav, section {
-  background: #eee;
+    background: #ccc;
   text-align: center;
 }
 
 footer {
-  background: #eee;
+  background: #ccc;
   text-align: center;
 }
 

@@ -19,9 +19,9 @@
       <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>
-      <span><a href='../layout.html'>Inicio</a></span>
-		<span><a href='../pregunta.html'>Preguntas</a></span>
-		<span><a href='../creditos.html'>Creditos</a></span>
+      <span><a href='layout.html'>Inicio</a></span>
+		<span><a href='/pregunta.html'>Preguntas</a></span>
+		<span><a href='creditos.html'>Creditos</a></span>
 	</nav>
 
 
@@ -29,18 +29,18 @@
 
 	<div>
 	<form id="fregistro" name="fregistro" action = "php/registro.php" method="post" enctype="multipart/form-data">
-		<label>Dirección de correo * :</label><input type="email" name="email" id="email" required><br>
-		<label>Nombre * :</label> <input type="text" name="nombre" id="nombre" required><br>
-		<label>Apellido * :</label> <input type="text" name="apellido" id="apellido" required><br>
-		<label>Contraseña * :</label> <input type="password" name="pass1" id="pass1" required><br>
-    <label>Repetir contraseña * :</label> <input type="password" name="pass2" id="pass2" required><br>
+		<label>Dirección de correo * </label><input type="email" name="email" id="email" required ><br>
+		<label>Nombre * </label> <input type="text" name="nombre" id="nombre" required><br>
+		<label>Apellido * </label> <input type="text" name="apellido" id="apellido" required><br>
+		<label>Contraseña * </label> <input type="password" name="pass1" id="pass1" required><br>
+    <label>Repetir contraseña * </label> <input type="password" name="pass2" id="pass2" required><br>
 
     <br>
     <br>
     <input type="submit" id="boton" value="Registrarse">
 	</form>
   <div>
-        <img src="no-imagen.jpg" id="imagen" width="140px" height="140px">
+        <img src="" id="imagen" width="140px" height="140px" display none>
 
   </div>
 	</div>
@@ -79,6 +79,15 @@ $("#fpreguntas").submit(function(){
     return;
   }
 });
+
+$(document).ready(function(){
+  $("#imagen").css("visibility", "hidden");
+});
+
+$("#fileInput").change(function(){
+  $("#imagen").attr("src",$("#fileInput").val());
+  $("#imagen").css("visibility","visible");
+})
 
 
 function validateEmail(){

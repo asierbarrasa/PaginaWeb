@@ -47,7 +47,7 @@
   <input type="submit" id="boton">
 	</form>
   <div>
-        <img src="no-imagen.jpg" id="imagen" width="140px" height="140px">
+        <img src="" id="imagen" width="140px" height="140px">
 
   </div>
 	</div>
@@ -62,9 +62,9 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<!--<script>
+<script>
 
-  $("#fpreguntas").submit(function(){
+ /*$("#fpreguntas").submit(function(){
     if (!requiredField("email")) {
       alert("Introuce un email")
       event.preventDefault();
@@ -101,7 +101,7 @@
     }else {
       return;
     }
-  });
+  }); */
   $("#fileInput").change(function(){
     var exp = $("#fileInput")[0].files;
     console.log(exp);
@@ -114,7 +114,7 @@
       reader.readAsDataURL(exp[0]);
   });
 
-function validateEmail(){
+/*function validateEmail(){
   var email=$("#email").val();
   var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|eus]");
   var rta=er1.test(email);
@@ -149,8 +149,9 @@ function validarCompl(){
   } else {
     return false;
   }
-}
+}*/
 
-</script>-->
+
+</script>
 </body>
 </html>

@@ -28,7 +28,7 @@
 
 
 	<div>
-<form id="fpreguntas" name="fpreguntas" action="php/InsertarPreguntaConFoto.php" method="post" enctype="multipart/form-data">
+<form id="fpreguntas" name="fpreguntas" action="../php/InsertarPreguntaConFoto.php" method="post" enctype="multipart/form-data">
   <label>Dirección de correo * :</label><input type="text" name="email" id="email"><br>
   <label>Enunciado de la pregunta * :</label><input type="text" name="preg" id="preg"><br>
   <label>Respuesta correcta * :</label><input type="text" name="respC" id="respC"><br>
@@ -62,7 +62,7 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>
+<!--<script>
 
   $("#fpreguntas").submit(function(){
     if (!requiredField("email")) {
@@ -116,7 +116,7 @@
 
 function validateEmail(){
   var email=$("#email").val();
-  var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|ehu]");
+  var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|eus]");
   var rta=er1.test(email);
   console.log(rta)
   return rta;
@@ -140,7 +140,7 @@ function validarPregunta(){
   }else {
     return true;
   }
-}
+
 
 function validarCompl(){
   var compl=$("#compl").val();
@@ -151,6 +151,6 @@ function validarCompl(){
   }
 }
 
-</script>
+</script>-->
 </body>
 </html>

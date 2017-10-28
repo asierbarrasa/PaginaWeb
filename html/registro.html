@@ -28,7 +28,7 @@
     <section class="main" id="s1">
 
 	<div>
-	<form id="fpreguntas" name="fpreguntas" action = "php/InsertarPregunta.php" method="post" enctype="multipart/form-data">
+	<form id="fpreguntas" name="fpreguntas" action = signUp.php  method="post" enctype="multipart/form-data">
 		<label>Dirección de correo * :</label><input type="email" name="email" id="email" required><br>
 		<label>Nombre * :</label> <input type="text" name="nombre" id="nombre" required><br>
 		<label>Apellido * :</label> <input type="text" name="apellido" id="apellido" required><br>
@@ -83,7 +83,7 @@ $("#fpreguntas").submit(function(){
 
 function validateEmail(){
 var email=$("#email").val();
-var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|ehu]");
+var er1= new RegExp("[a-z]*[0-9]{3}@ikasle\.ehu\.(es|eus)");
 var rta=er1.test(email);
 console.log(rta)
 return rta;
@@ -111,7 +111,7 @@ function validarPassword(){
   }
 }
 
-
 </script>
+
 </body>
 </html>

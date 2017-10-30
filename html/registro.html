@@ -28,7 +28,7 @@
     <section class="main" id="s1">
 
 	<div>
-	<form id="fpreguntas" name="fpreguntas" action = signUp.php  method="post" enctype="multipart/form-data">
+	<form id="fpreguntas" name="fpreguntas" action ="" method="post" enctype="multipart/form-data">
 		<label>Dirección de correo * :</label><input type="email" name="email" id="email" required><br>
 		<label>Nombre * :</label> <input type="text" name="nombre" id="nombre" required><br>
 		<label>Apellido * :</label> <input type="text" name="apellido" id="apellido" required><br>
@@ -36,6 +36,7 @@
     <label>Repetir contraseña * :</label> <input type="password" name="pass2" id="pass2" required><br>
 
     <br>
+    <input type = "file" id = "file" name = "imagen">
     <br>
     <input type="submit" id="boton" value="Registrarse">
 	</form>
@@ -54,7 +55,10 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
+
 $("#fpreguntas").submit(function(){
+
+
   if (!requiredField("email")) {
     alert("Introuce un email")
     event.preventDefault();
@@ -75,9 +79,33 @@ $("#fpreguntas").submit(function(){
       event.preventDefault();
   }else if (!validarPassword()) {
     alert("Las contraseñas no coinciden")
-  }else {
-    return;
-  }
+  }else{
+
+    var data = new FormData();
+    data.append('email', $("#email").val());
+    data.append('nombre', $("#nombre").val());
+    data.append('apellido', $("#apellido").val());
+    data.append('pass1', $("#pass1").val());
+    data.append('imagen', $("#file").prop('files')[0]);
+
+      $.ajax({
+        url : '../php/signUp.php',
+        type: 'POST',
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(e){alert(e)},
+        error: function(){alert("Email ya en uso")}
+
+    });
+      return false;
+    }
+
+
+
+
+
 });
 
 
@@ -112,6 +140,7 @@ function validarPassword(){
 }
 
 </script>
+
 
 </body>
 </html>

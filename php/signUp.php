@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "id2921858_swg26","*******","id2921858_quiz");
+$link = mysqli_connect("localhost", "root","","Quiz");
 
 $datetime = date("YmdH:m:s");
 
@@ -13,12 +13,12 @@ if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
   }
 
 $sql = "INSERT INTO Users(email,pass,name,lastname,img) VALUES ('".$_POST["email"]
-."', '".$_POST["pass1"]."', '".$_POST["name"]."', '".$_POST["apellido"]."', '".$img."')";
+."', '".$_POST["pass1"]."', '".$_POST["nombre"]."', '".$_POST["apellido"]."',".$img."')";
 
 if(!mysqli_query($link, $sql))
 {
-  die('Error: '.mysqli_error($link));
+  die('Error: Email en uso.');
 }
-header('Location: /html/layout.html');
+}
 
- ?>
+?>

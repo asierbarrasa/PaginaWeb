@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "root","","Quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","****","id2921858_quiz");
 
 $datetime = date("YmdH:m:s");
 
@@ -8,7 +8,7 @@ if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
 {
   if ($_FILES["imagen"]["type"]=="image/jpeg" || $_FILES["imagen"]["type"]=="image/pjpeg" || $_FILES["imagen"]["type"]=="image/gif" || $_FILES["imagen"]["type"]=="image/bmp" || $_FILES["imagen"]["type"]=="image/png")
   {
-    $img = "../assets/imagenesUsuarios".$datetime;
+    $img = "../assets/imagenesUsuarios/".$datetime;
     move_uploaded_file($_FILES["imagen"]["tmp_name"],$img);
   }
 

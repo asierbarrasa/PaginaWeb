@@ -41,7 +41,7 @@
     <input type="submit" id="boton" value="Registrarse">
 	</form>
   <div>
-        <img src="no-imagen.jpg" id="imagen" width="140px" height="140px">
+        <img src="" id="imagen" width="140px" height="140px">
 
   </div>
 	</div>
@@ -55,8 +55,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
+
 $(document).ready(function(){
-$("#imagen").css("visibility","hidden");
+    $("#imagen").css("visibility","hidden");
 });
 
 $("#file").change(function(){
@@ -112,9 +113,32 @@ $("#fregistro").submit(function(){
         cache: false,
         contentType: false,
         processData: false,
-        success: function(e){alert(e);
-              
-        error: function(){alert("Email ya en uso")}
+        success: function(e){
+            console.log(e);
+            switch(e){
+            case "1":
+                alert("Error: Email ya en uso.");
+            case "0":
+                var dataForm = new FormData();
+                  dataForm.append('email', $("#email").val());
+                  dataForm.append('pass', $("#pass1").val());
+
+                  $.ajax({
+                    url: '../php/login.php',
+                    type: 'POST',
+                    data: dataForm,
+                    processData: false,
+                    cache: false,
+                    contentType: false,
+                    success: function(e){
+                     switch(e){
+                         case "0":
+                             $(location).attr("href", "../html/layout.html");
+                         case "1":
+                             alert("Error");
+                     }}
+                  });
+        }}
 
     });
 

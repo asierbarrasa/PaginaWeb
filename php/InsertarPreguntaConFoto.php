@@ -1,4 +1,29 @@
 <?php
+
+if(!empty($_POST["email"])||!empty($_POST["comp"])||!empty($_POST["preg"])||!empty($_POST["respC"])
+  ||!empty($_POST["respI1"])||!empty($_POST["respI2"])||!empty($_POST["respI3"])||!empty($_POST["tema"])){
+
+  if(!preg_match("[a-z][0-9]{3}@ikasle.ehu.[es|eus]",$_POST["email"])){
+    echo "Email no valido";
+    exit;
+  }
+
+  if(!preg_match("[1-5]{1}",$_POST["comp"])){
+    echo "Complejidad fuera de rango";
+    exit;
+  }
+
+
+}else{
+  echo "Algun campo obligatorio vacio";
+  exit;
+}
+
+
+
+
+
+
 $link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
 if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
 {

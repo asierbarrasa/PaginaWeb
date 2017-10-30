@@ -13,12 +13,13 @@ if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
   }
 
 $sql = "INSERT INTO Users(email,pass,name,lastname,img) VALUES ('".$_POST["email"]
-."', '".$_POST["pass1"]."', '".$_POST["nombre"]."', '".$_POST["apellido"]."',".$img."')";
+."', '".$_POST["pass1"]."', '".$_POST["nombre"]."', '".$_POST["apellido"]."','".$img."')";
 
 if(!mysqli_query($link, $sql))
 {
-  die('Error: Email en uso.');
+  die('1');
 }
+echo "0";
 }
 
 ?>

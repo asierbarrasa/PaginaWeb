@@ -7,8 +7,9 @@ $result = mysqli_query($link, $sql);
 $row = mysqli_fetch_assoc($result);
 if(mysqli_num_rows ($result)==1){
   if ($row["email"] == $email && $row["pass"] == $pass){
-  return True;
+  header('Location: ../html/layout.html');
+  exit;
   }
 }
-return False;
+echo "Error: El usuario o la contraseña son incorrector"
  ?>

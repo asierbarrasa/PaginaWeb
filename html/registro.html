@@ -28,7 +28,7 @@
     <section class="main" id="s1">
 
 	<div>
-	<form id="fpreguntas" name="fpreguntas" action ="" method="post" enctype="multipart/form-data">
+	<form id="fregistro" name="fpreguntas" action ="" method="post" enctype="multipart/form-data">
 		<label>Dirección de correo * :</label><input type="email" name="email" id="email" required><br>
 		<label>Nombre * :</label> <input type="text" name="nombre" id="nombre" required><br>
 		<label>Apellido * :</label> <input type="text" name="apellido" id="apellido" required><br>
@@ -55,8 +55,25 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
+$(document).ready(function(){
+$("#imagen").css("visibility","hidden");
+});
 
-$("#fpreguntas").submit(function(){
+$("#file").change(function(){
+  $("#imagen").css("visibility","visible");
+  var exp = $("#file")[0].files;
+  console.log(exp);
+  var reader = new FileReader();
+  reader.onloadend = function(e){
+    var origen,tipo;
+    origen = e.target;
+    $('#imagen').attr('src', origen.result)
+  };
+    reader.readAsDataURL(exp[0]);
+});
+
+
+$("#fregistro").submit(function(){
 
 
   if (!requiredField("email")) {
@@ -95,10 +112,12 @@ $("#fpreguntas").submit(function(){
         cache: false,
         contentType: false,
         processData: false,
-        success: function(e){alert(e)},
+        success: function(e){alert(e);
+              
         error: function(){alert("Email ya en uso")}
 
     });
+
       return false;
     }
 

@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+
   <div id='page-wrap'>
     <header class='main' id='h1'>
       <span class="right"><a href="registro.html">Registrarse</a></span>
@@ -52,16 +54,36 @@
   <script>
     $("#fpreguntas").submit(function() {
       if (!requiredField("email")) {
-        alert("Introuce un email")
+        alert("Introuce un email");
         event.preventDefault();
       } else if (!validateEmail()) {
-        alert("Introduce un email valido")
+        alert("Introduce un email valido");
         event.preventDefault();
       } else if (!requiredField("pass1")) {
-        alert("Introduce tu contraseña")
+        alert("Introduce tu contraseña");
         event.preventDefault();
       } else {
-        return;
+          var dataForm = new FormData();
+          dataForm.append('email', $("#email").val());
+          dataForm.append('pass', $("#pass1").val());
+          $.ajax({
+
+              url: '../php/login.php',
+              type: 'POST',
+              data: dataForm,
+              processData: false,
+              cache: false,
+              contentType: false,
+              success: function(e){
+                  switch(e){
+                      case "0":
+                          $(location).attr("href", "../html/layout.html");
+                          break;
+                      case "1":
+                          alert("Error");
+                          break;
+                  }}
+          });
       }
     });
 

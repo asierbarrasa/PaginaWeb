@@ -15,7 +15,6 @@ section{
 
 input{
   width: 30%;
-  border: none;
   border: 1px solid black;
   margin-bottom: 5px;
   padding: 5px;
@@ -45,7 +44,7 @@ label{
 
   display: block;
   width: 100%;
-  font-size: : 15px;
+  font-size: 15px;
   font-family: Courier, monospace;
   margin-bottom: 5px;
 
@@ -78,14 +77,13 @@ footer {
 }
 
 nav span {
-  margin: 0px 10px 0px 0px;
   width: 100%;
-  display: inline-block;
+  display: block;
+  margin: 20px;
 }
 
 #ErrorMsgs {
   color: #f61;
-  font-size: smaler
 }
 
 #imm1 {

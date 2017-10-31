@@ -77,7 +77,20 @@
               success: function(e){
                   switch(e){
                       case "0":
-                          $(location).attr("href", "../html/layout.html");
+                      var data = FormData();
+                      data.append("email", $("email").val());
+                      $.ajax({
+                        url: '../php/getImagen.php'
+                        type: 'POST'
+                        data: data,
+                        processData: false,
+                        cache: false,
+                        contentType: false,
+                        success: function(e){
+                          $(location).attr("href",'../php/layoutUser.php?email='.$("email").val().'&img='.e);
+                        }
+
+                      });
                           break;
                       case "1":
                           alert("Error");

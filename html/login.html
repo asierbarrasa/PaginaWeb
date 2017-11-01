@@ -87,7 +87,7 @@
                         cache: false,
                         contentType: false,
                         success: function(e){
-                          $(location).attr("href",'../php/layoutUser.php?email='.$("email").val().'&img='.e);
+                          $(location).attr("href",'../php/layoutUser.php?email='+$("email").val()+'&img='+e);
                         }
 
                       });

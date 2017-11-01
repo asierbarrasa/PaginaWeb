@@ -1,7 +1,7 @@
 <?php
 $email = $_POST["email"];
 $pass = $_POST["pass"];
-$link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","*****","id2921858_quiz");
 
 $sql = "Select * FROM Users Where email = '".$email."'";
 $result = mysqli_query($link, $sql);

@@ -24,7 +24,7 @@ if(!empty($_POST["email"])||!empty($_POST["comp"])||!empty($_POST["preg"])||!emp
 
 
 
-$link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","****","id2921858_quiz");
 if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
 {
   if ($_FILES["imagen"]["type"]=="image/jpeg" || $_FILES["imagen"]["type"]=="image/pjpeg" || $_FILES["imagen"]["type"]=="image/gif" || $_FILES["imagen"]["type"]=="image/bmp" || $_FILES["imagen"]["type"]=="image/png")

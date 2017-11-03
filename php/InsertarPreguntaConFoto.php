@@ -42,6 +42,21 @@ if(!mysqli_query($link, $sql))
   die('Error: '.mysqli_error($link));
 }
 
+$xml = simplexml_load_file("../assets/xml/preguntas.xml");
+
+$assessmentItem = $xml->addChild('assessmentItem');
+$assessmentItem->addAttribute('complexity', $_POST['comp']);
+$assessmentItem->addAttribute('subject', $_POST['tema']);
+$assessmentItem->addAttribute('author', $_POST['email']);
+$itemBody = $assessmentItem->addChild('itemBody');
+$itemBody->addChild('p',$_POST['preg']);
+$correctResponse = $assessmentItem->addChild('correctResponse');
+$correctResponse->addChild('value', $_POST['respC']);
+$incorrectResponse = $itemBody->addChild('incorrectResponse');
+$incorrectResponse->addChild('value', $_POST['respI1']);
+$incorrectResponse->addChild('value', $_POST['respI2']);
+$incorrectResponse->addChild('value', $_POST['respI3']);
+
 }
 echo "1 record added";
 echo "<p> <a href = 'VerPreguntasConFoto.php'> Ver registros </a>";

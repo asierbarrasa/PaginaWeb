@@ -15,7 +15,7 @@
     <header class='main' id='h1'>
         <?php echo $_GET["email"]?> <img id="imgUser" src= '<?php echo $_GET['img']?>' width='50px' height='50px'><br>
         <span class="right" ><a href="../html/layout.html">Logout</a></span>
-
+        
         <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>
@@ -30,7 +30,7 @@
 
         <div>
             <form id="fpreguntas" name="fpreguntas" action="../php/InsertarPreguntaConFoto.php" method="post" enctype="multipart/form-data">
-                <label>Dirección de correo * :</label><input type="text" name="email" id="email" value ='<?php echo $_GET["email"]?>' disabled><br>
+                <label>Dirección de correo * :</label><input type="text" name="email" id="email" value ='<?php echo $_GET["email"]?>'><br>
                 <label>Enunciado de la pregunta * :</label><input type="text" name="preg" id="preg"><br>
                 <label>Respuesta correcta * :</label><input type="text" name="respC" id="respC"><br>
                 <label>Respueta incorrecta 1 * :</label><input type="text" name="respI1" id="respI1"><br>

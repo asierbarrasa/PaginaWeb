@@ -13,8 +13,8 @@
 <body>
   <div id='page-wrap'>
     <header class='main' id='h1'>
-      <span class="right"><a href="registro">Registrarse</a></span>
-      <span class="right"><a href="login">Login</a></span>
+      <span class="right"><a href="registro.html">Registrarse</a></span>
+      <span class="right"><a href="login.html">Login</a></span>
       <span class="right" style="display:none;"><a href="/logout">Logout</a></span>
       <h2>Quiz: el juego de las preguntas</h2>
     </header>
@@ -132,23 +132,27 @@ $("#fregistro").submit(function(){
                     success: function(e){
                      switch(e){
                          case "0":
-                         var data = FormData();
-                         data.append('email', $("email").val());
+                         var email = $("#email").val();
+                         var data = new FormData();
+                         data.append('email', email);
+                         
                              $.ajax({
-                               url: '../php/getImagen.php'
-                               type: 'POST'
+                               url: '../php/getImagen.php',
+                               type: 'POST',
                                data: data,
                                processData: false,
                                cache: false,
                                contentType: false,
                                success: function(e){
-                                 $(location).attr("href",'../php/layoutUser.php?email='.$("email").val().'&img='.e);
+                                 $(location).attr("href",'../php/layoutUser.php?email='+email+'&img='+e);
                                }
 
 
                              });
+                             break;
                          case "1":
                              alert("Error");
+                             break;
                      }}
                   });
         }}

@@ -3,12 +3,12 @@
 if(!empty($_POST["email"])||!empty($_POST["comp"])||!empty($_POST["preg"])||!empty($_POST["respC"])
   ||!empty($_POST["respI1"])||!empty($_POST["respI2"])||!empty($_POST["respI3"])||!empty($_POST["tema"])){
 
-  if(!preg_match("[a-z][0-9]{3}@ikasle.ehu.[es|eus]",$_POST["email"])){
+  if(!preg_match("/^[a-z]{2,}[0-9]{3}\@ikasle\.ehu\.(es|eus)$/",$_POST["email"])){
     echo "Email no valido";
     exit;
   }
 
-  if(!preg_match("[1-5]{1}",$_POST["comp"])){
+  if(!preg_match("/^[1-5]{1}$/",$_POST["comp"])){
     echo "Complejidad fuera de rango";
     exit;
   }

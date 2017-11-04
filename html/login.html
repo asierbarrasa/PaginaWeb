@@ -16,8 +16,8 @@
   <div id='page-wrap'>
     <header class='main' id='h1'>
       <span class="right"><a href="registro.html">Registrarse</a></span>
-      <span class="right"><a href="../php/login.php">Login</a></span>
-      <span class="right" style="display:none;"><a href="#">Logout</a></span>
+      <span class="right"><a href="login.html">Login</a></span>
+      <span class="right" style="display:none;"><a href="/logout">Logout</a></span>
       <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>
@@ -29,7 +29,7 @@
     <section class="main" id="s1">
 
       <div>
-        <form id="flogin" name="flogin" action="php/login.php" method="post" enctype="multipart/form-data">
+        <form id="flogin" name="flogin" action="" method="post" enctype="multipart/form-data">
           <label>Dirección de correo * :</label><input type="email" name="email" id="email" required><br>
           <label>Contraseña * :</label> <input type="password" name="pass" id="pass1" required><br>
 
@@ -37,10 +37,7 @@
           <br>
           <input type="submit" id="boton" value="Ingresar">
         </form>
-        <div>
-          <img src="no-imagen.jpg" id="imagen" width="140px" height="140px">
-
-        </div>
+       
       </div>
     </section>
     <footer class='main' id='f1'>
@@ -52,7 +49,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script>
-    $("#fpreguntas").submit(function() {
+    $("#flogin").submit(function() {
       if (!requiredField("email")) {
         alert("Introuce un email");
         event.preventDefault();
@@ -66,6 +63,7 @@
           var dataForm = new FormData();
           dataForm.append('email', $("#email").val());
           dataForm.append('pass', $("#pass1").val());
+          console.log("Aqui");
           $.ajax({
 
               url: '../php/login.php',
@@ -77,8 +75,8 @@
               success: function(e){
                   switch(e){
                       case "0":
-                      var data = FormData();
-                      data.append("email", $("email").val());
+                      var data = new FormData();
+                      data.append("email", $("#email").val());
                       $.ajax({
                         url: '../php/getImagen.php',
                         type: 'POST',
@@ -87,7 +85,8 @@
                         cache: false,
                         contentType: false,
                         success: function(e){
-                          $(location).attr("href",'../php/layoutUser.php?email='+$("email").val()+'&img='+e);
+                            console.log(e);
+                          $(location).attr("href",'../php/layoutUser.php?email='+$("#email").val()+'&img='+e);
                         }
 
                       });
@@ -97,6 +96,7 @@
                           break;
                   }}
           });
+          return false;
       }
     });
 

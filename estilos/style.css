@@ -36,6 +36,17 @@ input[type="submit"]:hover{
 
 }
 
+input[type="button"]{
+
+  padding: 8px;
+
+}
+
+input[type="button"]:hover{
+  background: rgb(21, 88, 67);
+  cursor: pointer;
+}
+
 input:focus{
   border: 2px solid rgb(9, 95, 208);
 }

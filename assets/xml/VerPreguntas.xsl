@@ -22,6 +22,11 @@
                             </TD>
                             <TD>
                                 <FONT SIZE="2"  FACE="Verdana">
+                                    <xsl:value-of select="correctResponse/value"/> <BR/>
+                                </FONT>
+                            </TD>
+                            <TD>
+                                <FONT SIZE="2"  FACE="Verdana">
                                     <xsl:for-each select="/assessmentItems/assessmentItem/incorrectResponses" >
                                         <UL>
                                             <LI>

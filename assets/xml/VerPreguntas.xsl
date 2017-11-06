@@ -31,7 +31,7 @@
                                     <xsl:for-each select="incorrectResponses/value" >
                                         <UL>
                                             <LI>
-                                                <xsl:text/> <BR/>
+                                                <xsl:value-of select="text()"/> <BR/>
                                             </LI>
                                         </UL>
                                     </xsl:for-each>

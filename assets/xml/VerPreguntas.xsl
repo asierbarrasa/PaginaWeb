@@ -28,10 +28,10 @@
                             </TD>
                             <TD>
                                 <FONT SIZE="2"  FACE="Verdana">
-                                    <xsl:for-each select="/assessmentItems/assessmentItem/incorrectResponses" >
+                                    <xsl:for-each select="incorrectResponses/value" >
                                         <UL>
                                             <LI>
-                                                <xsl:value-of select="value"/> <BR/>
+                                                <xsl:text/> <BR/>
                                             </LI>
                                         </UL>
                                     </xsl:for-each>

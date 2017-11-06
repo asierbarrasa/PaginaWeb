@@ -15,6 +15,14 @@ if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
 $sql = "INSERT INTO Users(email,pass,name,lastname,img) VALUES ('".$_POST["email"]
 ."', '".$_POST["pass1"]."', '".$_POST["nombre"]."', '".$_POST["apellido"]."','".$img."')";
 
+  $usuarios = new SimpleXMLElement('../assets/xml/usuarios.xml', null, true);
+  $usuario=$usuarios->addChild('usuario');
+  $usuario->addChild('email',$_POST["email"]);
+  $usuario->addChild('nombre',$_POST["nombre"]);
+  $usuario->addChild('apellido1','0');
+  $usuario->addChild('apellido2','0');
+  $usuario->addChild('telefono','0');
+
 if(!mysqli_query($link, $sql))
 {
   die('1');

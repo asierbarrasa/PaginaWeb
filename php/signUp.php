@@ -22,6 +22,7 @@ $sql = "INSERT INTO Users(email,pass,name,lastname,img) VALUES ('".$_POST["email
   $usuario->addChild('apellido1','0');
   $usuario->addChild('apellido2','0');
   $usuario->addChild('telefono','0');
+  $usuarios->asXML('../assets/xml/usuarios.xml');
 
 if(!mysqli_query($link, $sql))
 {

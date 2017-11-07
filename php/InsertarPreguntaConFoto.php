@@ -33,6 +33,9 @@ if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
     move_uploaded_file($_FILES["imagen"]["tmp_name"],$ruta);
   }
 
+
+
+}
 $sql = "INSERT INTO Pregunta(email, enunciado, respCorrecta, respInc1, respInc2"
 .", respInc3, complejidad, tema, imagen) VALUES ('$_POST[email]', '$_POST[preg]'".
 ", '$_POST[respC]', '$_POST[respI1]', '$_POST[respI2]', '$_POST[respI3]'".
@@ -58,8 +61,6 @@ $incorrectResponse->addChild('value', $_POST['respI2']);
 $incorrectResponse->addChild('value', $_POST['respI3']);
 
 formatXml($xml);
-
-}
 echo "1 record added";
 echo "<p> <a href = 'VerPreguntasConFoto.php'> Ver registros </a>";
 echo "<p><a href= 'VerPreguntasXml.php'> Ver Preguntas Xml </a>";

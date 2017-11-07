@@ -24,7 +24,9 @@ if(!empty($_POST["email"])||!empty($_POST["comp"])||!empty($_POST["preg"])||!emp
 
 
 
-$link = mysqli_connect("localhost", "id2921858_swg26","****","id2921858_quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
+$ruta="";
+if(!empty($_FILES["imagen"])){
 if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
 {
   if ($_FILES["imagen"]["type"]=="image/jpeg" || $_FILES["imagen"]["type"]=="image/pjpeg" || $_FILES["imagen"]["type"]=="image/gif" || $_FILES["imagen"]["type"]=="image/bmp" || $_FILES["imagen"]["type"]=="image/png")
@@ -35,6 +37,7 @@ if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
 
 
 
+}
 }
 $sql = "INSERT INTO Pregunta(email, enunciado, respCorrecta, respInc1, respInc2"
 .", respInc3, complejidad, tema, imagen) VALUES ('$_POST[email]', '$_POST[preg]'".
@@ -55,12 +58,12 @@ $itemBody = $assessmentItem->addChild('itemBody');
 $itemBody->addChild('p',$_POST['preg']);
 $correctResponse = $assessmentItem->addChild('correctResponse');
 $correctResponse->addChild('value', $_POST['respC']);
-$incorrectResponse = $itemBody->addChild('incorrectResponse');
+$incorrectResponse = $assessmentItem->addChild('incorrectResponses');
 $incorrectResponse->addChild('value', $_POST['respI1']);
 $incorrectResponse->addChild('value', $_POST['respI2']);
 $incorrectResponse->addChild('value', $_POST['respI3']);
 
-formatXml($xml);
+formatXml($xml)->save('../assets/xml/preguntas.xml');
 echo "1 record added";
 echo "<p> <a href = 'VerPreguntasConFoto.php'> Ver registros </a>";
 echo "<p><a href= 'VerPreguntasXml.php'> Ver Preguntas Xml </a>";
@@ -72,7 +75,7 @@ function formatXml($SimpleXMLElement)
   $xmlDocument->preserveWhiteSpace = false;
   $xmlDocument->formatOutput = true;
   $xmlDocument->loadXML($SimpleXMLElement->asXML());
-  return $xmlDocument->saveXML();
+  return $xmlDocument;
 }
 
  ?>

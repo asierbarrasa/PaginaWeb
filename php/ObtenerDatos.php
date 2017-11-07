@@ -19,9 +19,11 @@
       <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>
-      <span><a href='layout.html'>Inicio</a></spam>
-		<span><a href='pregunta.html'>Preguntas</a></spam>
-		<span><a href='creditos.html'>Creditos</a></spam>
+      <span><a href='layoutUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Inicio</a></span>
+        <span><a href='preguntaUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Preguntas</a></span>
+        <span><a href ='VerPreguntasConFoto.php'>Ver Preguntas</a></span>
+        <span><a href='creditosUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Creditos</a></span>
+        <span><a href ='ObtenerDatos.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Consultar usuarios</a></span>
 	</nav>
     <section class="main" id="s1">
     <div>
@@ -52,19 +54,21 @@
       console.log("Entro en xml");
       var listUsuarios = $(d).find('usuario');
       var emailSelec = $("#email").val();
+      console.log(listUsuarios);
 
       for(var i = 0; i<listUsuarios.length; i++){
-        console.log(listUsuarios[i]);
-        if(listUsuarios[i].childNodes[1].childNodes[0].nodeValue == emailSelec){
-          $("#nombre").val(listUsuarios[i].childNodes[3].childNodes[0].nodeValue);
-          $("#apellidos").val(listUsuarios[i].childNodes[5].childNodes[0].nodeValue+" "+listUsuarios[i].childNodes[7].childNodes[0].nodeValue);
-          $("#telefono").val(listUsuarios[i].childNodes[9].childNodes[0].nodeValue);
+        console.log($(listUsuarios[i]).find("email").text());
+        if($(listUsuarios[i]).find("email").text() == emailSelec){
+            console.log($(listUsuarios[i]).find("email").text());
+          $("#nombre").val($(listUsuarios[i]).find("nombre").text());
+          $("#apellidos").val($(listUsuarios[i]).find("apellido1").text()+" "+$(listUsuarios[i]).find("apellido2").text());
+          $("#telefono").val($(listUsuarios[i]).find("telefono").text());
           return;
         }
       }
-      $("#nombre").val("");
-      $("#apellidos").val("");
-      $("#telefono").val("");
+      //$("#nombre").val("");
+      //$("#apellidos").val("");
+      //$("#telefono").val("");
       alert("No se ha encontrado ningun usuario con email: "+emailSelec);
 
     });

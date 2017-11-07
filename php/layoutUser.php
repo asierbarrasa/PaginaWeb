@@ -23,6 +23,7 @@
 		<span><a href='preguntaUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Preguntas</a></span>
 		<span><a href ='VerPreguntasConFoto.php'>Ver Preguntas</a></span>
 		<span><a href='creditosUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Creditos</a></span>
+		<span><a href ='ObtenerDatos.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Consultar usuarios</a></span>
 	</nav>
     <section class="main" id="s1">
 

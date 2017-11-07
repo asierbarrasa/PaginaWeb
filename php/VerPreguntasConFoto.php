@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("localhost", "root","","Quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","*****","id2921858_quiz");
 $datos = mysqli_query($link, "select * from Pregunta");
 echo '<table border=1> <tr> <th> Email </th> <th> Enunciado </th> <th> Respuesta Correcta</th>'
 .'<th> Respuesta Incorrecta 1</th><th> Respuesta Incorrecta 2</th><th> Respuesta Incorrecta 3</th>'

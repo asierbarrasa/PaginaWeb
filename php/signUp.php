@@ -21,8 +21,8 @@ $sql = "INSERT INTO Users(email,pass,name,lastname,img) VALUES ('".$_POST["email
   $usuario=$xml->addChild('usuario');
   $usuario->addChild('email',$_POST["email"]);
   $usuario->addChild('nombre',$_POST["nombre"]);
-  $usuario->addChild('apellido1','0');
-  $usuario->addChild('apellido2','0');
+  $usuario->addChild('apellido1',$_POST["apellido"]);
+  $usuario->addChild('apellido2','');
   $usuario->addChild('telefono','0');
   formatXml($xml)->save('usuarios.xml');
 

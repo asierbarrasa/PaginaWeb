@@ -13,9 +13,8 @@
 <body>
   <div id='page-wrap'>
     <header class='main' id='h1'>
-      <span class="right"><a href="registro.html">Registrarse</a></span>
-      <span class="right"><a href="login.html">Login</a></span>
-      <span class="right" style="display:none;"><a href="/logout">Logout</a></span>
+        <?php echo $_GET["email"]?> <img id="imgUser" src= '<?php echo $_GET['img']?>' width = '50px' heigth= '50px'><br>
+      <span class="right"><a href="../html/layout.html">Logout</a></span>
       <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>
@@ -49,26 +48,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
   $("#btn").click(function(){
-    console.log("Entro");
     $.get("usuarios.xml",function(d){
-      console.log("Entro en xml");
       var listUsuarios = $(d).find('usuario');
       var emailSelec = $("#email").val();
-      console.log(listUsuarios);
 
       for(var i = 0; i<listUsuarios.length; i++){
-        console.log($(listUsuarios[i]).find("email").text());
         if($(listUsuarios[i]).find("email").text() == emailSelec){
-            console.log($(listUsuarios[i]).find("email").text());
           $("#nombre").val($(listUsuarios[i]).find("nombre").text());
           $("#apellidos").val($(listUsuarios[i]).find("apellido1").text()+" "+$(listUsuarios[i]).find("apellido2").text());
           $("#telefono").val($(listUsuarios[i]).find("telefono").text());
           return;
         }
       }
-      //$("#nombre").val("");
-      //$("#apellidos").val("");
-      //$("#telefono").val("");
       alert("No se ha encontrado ningun usuario con email: "+emailSelec);
 
     });

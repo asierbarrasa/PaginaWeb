@@ -1,6 +1,6 @@
 <?php
 
-$link = mysqli_connect("localhost", "id2921858_swg26","****","id2921858_quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","*******","id2921858_quiz");
 
 $datetime = date("YmdH:m:s");
 
@@ -15,14 +15,14 @@ if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
 $sql = "INSERT INTO Users(email,pass,name,lastname,img) VALUES ('".$_POST["email"]
 ."', '".$_POST["pass1"]."', '".$_POST["nombre"]."', '".$_POST["apellido"]."','".$img."')";
 
-  $usuarios = new SimpleXMLElement('../assets/xml/usuarios.xml', null, true);
-  $usuario=$usuarios->addChild('usuario');
+  $xml = simplexml_load_file("../assets/xml/preguntas.xml");
+  $usuario=$xml->addChild('usuario');
   $usuario->addChild('email',$_POST["email"]);
   $usuario->addChild('nombre',$_POST["nombre"]);
   $usuario->addChild('apellido1','0');
   $usuario->addChild('apellido2','0');
   $usuario->addChild('telefono','0');
-  $usuarios->asXML('../assets/xml/usuarios.xml');
+  $xml->asXML('../html/usuarios.xml');
 
 if(!mysqli_query($link, $sql))
 {

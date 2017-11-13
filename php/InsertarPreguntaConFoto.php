@@ -65,8 +65,6 @@ $incorrectResponse->addChild('value', $_POST['respI3']);
 
 formatXml($xml)->save('../assets/xml/preguntas.xml');
 echo "1 record added";
-echo "<p> <a href = 'VerPreguntasConFoto.php'> Ver registros </a>";
-echo "<p><a href= 'VerPreguntasXml.php'> Ver Preguntas Xml </a>";
 mysqli_close($link);
 
 function formatXml($SimpleXMLElement)

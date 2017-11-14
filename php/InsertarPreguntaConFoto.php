@@ -24,7 +24,7 @@ if(!empty($_POST["email"])||!empty($_POST["comp"])||!empty($_POST["preg"])||!emp
 
 
 
-$link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","********","id2921858_quiz");
 $ruta="";
 if(!empty($_FILES["imagen"])){
 if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))

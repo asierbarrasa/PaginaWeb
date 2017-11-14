@@ -50,6 +50,11 @@
                 <input type="button" id="btnPreguntas" value="Ver preguntas">
             </form>
             <div>
+            <div id="contPreg">
+                <label class="pequeño">Preguntas tuyas: </label><label class="pequeño" id="contPreg"></label>
+
+
+            </div>
                 <img src="" id="imagen" width="140px" height="140px">
 
             </div>
@@ -145,6 +150,36 @@
         };
         reader.readAsDataURL(exp[0]);
     });
+
+    function setNumPreg(num){
+      $("#contPreg").html(num);
+    }
+
+    function contadorPreguntas(email){
+      var pregUs;
+      $.ajax({
+        url:"ContadorPreguntasUsuario.php?email="+email,
+        type:'GET',
+        processData: false,
+        cache: false,
+        contentType: false,
+        success: function (e){
+          pregUs = e;
+        }
+      });
+      var numPreg;
+      $.ajax({
+        url:"ContadorPreguntas.php",
+        type:'GET',
+        processData: false,
+        cache: false,
+        contentType: false,
+        success: function (e){
+          numPreg = e;
+        }
+      });
+      return (pregUs+"/"+numPreg);
+    }
 
     function validateEmail(){
       var email=$("#email").val();

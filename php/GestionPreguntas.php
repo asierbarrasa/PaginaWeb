@@ -51,7 +51,7 @@
             </form>
             <div>
             <div id="contPreg">
-                <label class="pequeño">Preguntas tuyas: </label><label class="pequeño" id="contPreg"></label>
+                <label class="pequeño">Preguntas tuyas: </label><label class="pequeño" id="contPregUs"></label>/<label class="pequeño" id="contPreg"></label>
 
 
             </div>
@@ -72,6 +72,9 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
+
+
+
 
     $("#fpreguntas").submit(function(e){
 
@@ -151,23 +154,21 @@
         reader.readAsDataURL(exp[0]);
     });
 
-    function setNumPreg(num){
-      $("#contPreg").html(num);
-    }
 
-    function contadorPreguntas(email){
-      var pregUs;
+
+    function contadorPreguntas(){
+  
       $.ajax({
-        url:"ContadorPreguntasUsuario.php?email="+email,
+        url:"ContadorPreguntasUsuario.php?email=<?php echo $_GET["email"]?>",
         type:'GET',
         processData: false,
         cache: false,
         contentType: false,
         success: function (e){
-          pregUs = e;
+          $("#contPregUs").val(e);
         }
       });
-      var numPreg;
+
       $.ajax({
         url:"ContadorPreguntas.php",
         type:'GET',
@@ -175,10 +176,10 @@
         cache: false,
         contentType: false,
         success: function (e){
-          numPreg = e;
+          $("#contPreg").val(e);
         }
       });
-      return (pregUs+"/"+numPreg);
+
     }
 
     function validateEmail(){

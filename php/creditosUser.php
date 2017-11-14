@@ -13,7 +13,7 @@
 <div id='page-wrap'>
     <header class='main' id='h1'>
         <?php echo $_GET["email"]?> <img id="imgUser" src= '<?php echo $_GET['img']?>' width = '50px' height='50px'><br>
-        <span class="right"><a href="../html/layout.html">Logout</a></span>
+        <span class="right"><a href="logOut.php">Logout</a></span>
         <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>

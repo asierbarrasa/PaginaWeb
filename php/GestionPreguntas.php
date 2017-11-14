@@ -48,10 +48,13 @@
                 <br>
                 <input type="submit" id="boton">
                 <input type="button" id="btnPreguntas" value="Ver preguntas">
+                <br>
+                <br>
+                <div id="numUsuarios"></div>
             </form>
             <div>
             <div id="contPreg">
-                <label class="pequeño">Preguntas tuyas: </label><label class="pequeño" id="contPregUs"></label>/<label class="pequeño" id="contPreg"></label>
+
 
 
             </div>
@@ -75,6 +78,12 @@
 
 
 
+    $(document).ready(function(){
+        $("#contPreg").html("<img src='../assets/Imagenes/carga.gif' heigth='50px' width='50px'>");
+        setInterval(function(){getNumPregUs()},10000);
+        setInterval(function(){getNumUsuarios()},10000);
+
+    });
 
     $("#fpreguntas").submit(function(e){
 
@@ -155,32 +164,42 @@
     });
 
 
+    function getNumPregUs() {
 
-    function contadorPreguntas(){
-  
-      $.ajax({
-        url:"ContadorPreguntasUsuario.php?email=<?php echo $_GET["email"]?>",
-        type:'GET',
-        processData: false,
-        cache: false,
-        contentType: false,
-        success: function (e){
-          $("#contPregUs").val(e);
-        }
-      });
-
-      $.ajax({
-        url:"ContadorPreguntas.php",
-        type:'GET',
-        processData: false,
-        cache: false,
-        contentType: false,
-        success: function (e){
-          $("#contPreg").val(e);
-        }
-      });
-
+        $.ajax({
+            url: "ContadorPreguntasUsuario.php?email=<?php echo $_GET["email"]?>",
+            type: 'GET',
+            processData: false,
+            cache: false,
+            contentType: false,
+            success: function (e) {
+                $("#contPreg").html("Preguntas tuyas: " + e);
+            }
+        });
     }
+
+
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {document.getElementById("numUsuarios").innerHTML=xmlhttp.responseText; }
+        }
+        function getNumUsuarios() {
+            if(str=="")
+            {
+                document.getElementById("numUsuarios").innerHTML="";
+                return;
+            }
+            xmlhttp.open("GET","verUsuariosActivos.php",true);
+            xmlhttp.send();
+        }
+
+
+
+
+
+
 
     function validateEmail(){
       var email=$("#email").val();

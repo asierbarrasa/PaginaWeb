@@ -185,7 +185,7 @@
             if (xmlhttp.readyState==4 && xmlhttp.status==200)
             {document.getElementById("numUsuarios").innerHTML=xmlhttp.responseText; }
         }
-        function showPeli()
+        function getNumUsuarios()
         {
             if(str=="")
             {

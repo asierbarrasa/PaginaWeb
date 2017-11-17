@@ -29,6 +29,7 @@
 	<div>
 	<form id="fregistro" name="fpreguntas" action ="" method="post" enctype="multipart/form-data">
 		<label>Dirección de correo * :</label><input type="email" name="email" id="email" required><br>
+    <div id="emailResp"></div>
 		<label>Nombre * :</label> <input type="text" name="nombre" id="nombre" required><br>
 		<label>Apellido * :</label> <input type="text" name="apellido" id="apellido" required><br>
 		<label>Contraseña * :</label> <input type="password" name="pass1" id="pass1" required><br>
@@ -58,6 +59,26 @@
 $(document).ready(function(){
     $("#imagen").css("visibility","hidden");
 });
+
+$("#emial").blur(function(){
+  if(validateEmail){
+    var data = new FormData(this);
+    $.ajax({
+      url:"../php/ComprobarEmailVIP.php",
+      type:'POST',
+      data: data,
+      cache: false,
+      contentType: false,
+      processData: false,
+      success: function(e){
+        $("#emailResp").html(e);
+      }
+
+
+    });
+  }
+});
+
 
 $("#file").change(function(){
   $("#imagen").css("visibility","visible");

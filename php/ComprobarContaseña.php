@@ -1,0 +1,13 @@
+<?php
+  require_once('../lib/nusoap.php');
+  require_once('../lib/class.wsdlcache.php');
+
+
+  $ns = "https://adiazdeotazu.000webhostapp.com/web/php";
+  $server = new soap_server;
+  $server->configureWSDL('comprobar',$ns);
+  $server->schemaTargetNamespace=$ns;
+
+  $server->register('comprobar',)
+
+ ?>

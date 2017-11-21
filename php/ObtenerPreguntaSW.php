@@ -2,8 +2,7 @@
 //incluimos la clase nusoap.php
 require_once
 ('../lib/nusoap.php');
-require_once
-('../lib/class.wsdlcache.php');
+
 //creamos el objeto de tipo soap_server
 $ns ="http://localhost/nusoap-0.9.5/samples";
 $server = new soap_server ;

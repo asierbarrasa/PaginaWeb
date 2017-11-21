@@ -1,6 +1,6 @@
 <?php
   require_once('../lib/nusoap.php');
-  require_once('../lib/class.wsdlcache.php');
+
 
   $soapClient= new nusoap_client("http://ehusw.es/jav/ServiciosWeb/comprobarmatricula.php?wsdl",true);
   if(isset($_POST["email"])){

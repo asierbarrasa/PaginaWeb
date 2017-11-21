@@ -82,6 +82,28 @@ $("#email").blur(function(){
 
 });
 
+$("#pass1").blur(function(){
+    console.log("entra");
+
+    var data = new FormData();
+    data.append("email",$("#email").val());
+    $.ajax({
+        url:"../php/ComprobarContrasenaCliente.php",
+        type:'POST',
+        data: data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(e){
+            console.log(e);
+           // $("#emailResp").html(e);
+        }
+
+
+    });
+
+});
+
 
 $("#file").change(function(){
   $("#imagen").css("visibility","visible");

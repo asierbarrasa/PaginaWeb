@@ -74,8 +74,14 @@ $("#email").blur(function(){
       processData: false,
       success: function(e){
       	console.log(e);
-        $("#emailResp").html(e);
-          $("#boton").attr("style", "false");
+
+
+        if (e=="SI"){
+            $("#boton").attr("style", "false");
+        }else{
+            $("#emailResp").html("El email no es VIP");
+        }
+
       }
 
 

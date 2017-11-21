@@ -86,7 +86,9 @@ $("#pass1").blur(function(){
     console.log("entra");
 
     var data = new FormData();
-    data.append("email",$("#email").val());
+    data.append("pass1",$("#pass1").val());
+    console.log(data);
+
     $.ajax({
         url:"../php/ComprobarContrasenaCliente.php",
         type:'POST',

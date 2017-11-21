@@ -3,19 +3,19 @@
 
 
 
-  $ns = "https://adiazdeotazu.000webhostapp.com/web/php";
+  $ns = "http://localhost/SW/php/";
   $server = new soap_server;
   $server->configureWSDL('comprobarPass',$ns);
   $server->schemaTargetNamespace=$ns;
 
 $server ->register('comprobarPass ',
-    array('x'=>'xsd:int'),
+    array('x'=>'xsd:string'),
     array('z'=>'xsd:string'),
     $ns);
 
 
   function comprobarPass($x){
-    console.log("aaaa");
+    echo "aaaa";
     $path = "../assets/txt/toppasswords.txt";
     //$esta=  false;
     $file= fopen($path,"r");
@@ -28,5 +28,8 @@ $server ->register('comprobarPass ',
     }
     return "INVALIDA";
   }
+
+$HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
+$server->service($HTTP_RAW_POST_DATA);
 
  ?>

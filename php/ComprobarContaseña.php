@@ -8,6 +8,22 @@
   $server->configureWSDL('comprobar',$ns);
   $server->schemaTargetNamespace=$ns;
 
-  $server->register('comprobar',)
+  $server->register('comprobar',
+                    array('x'=>xsd:string),
+                    array('z'=>xsd:string),$ns);
+
+
+  function comprobar($x){
+    $path = "../assets/txt/toppasswords.txt";
+    $esta=  false;
+    $file= fopen($path,"r");
+    while(($line= fgets($file)) != false){
+      if($line==$x){
+        $esta=true;
+        break;
+      }
+    }
+    return $esta;
+  }
 
  ?>

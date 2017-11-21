@@ -29,16 +29,17 @@
 	<div>
 	<form id="fregistro" name="fpreguntas" action ="" method="post" enctype="multipart/form-data">
 		<label>Dirección de correo * :</label><input type="email" name="email" id="email" required><br>
-    <div id="emailResp"></div>
+        <input type="text" id="emailResp" value="" style="display: none;" readonly>
 		<label>Nombre * :</label> <input type="text" name="nombre" id="nombre" required><br>
 		<label>Apellido * :</label> <input type="text" name="apellido" id="apellido" required><br>
 		<label>Contraseña * :</label> <input type="password" name="pass1" id="pass1" required><br>
+        <input type="text" id="passResp" value="" style="display: none;" readonly>
     <label>Repetir contraseña * :</label> <input type="password" name="pass2" id="pass2" required><br>
 
     <br>
     <input type = "file" id = "file" name = "imagen">
     <br>
-    <input type="submit" id="boton" value="Registrarse" disabled="true" style="visibility:hidden">
+    <input type="submit" id="boton" value="Registrarse" display= "none" style="visibility:hidden">
 	</form>
   <div>
         <img src="" id="imagen" width="140px" height="140px">
@@ -60,6 +61,9 @@ $(document).ready(function(){
     $("#imagen").css("visibility","hidden");
 });
 
+var email=false;
+var pass=false;
+
 $("#email").blur(function(){
  	console.log("entra");
 
@@ -74,46 +78,56 @@ $("#email").blur(function(){
       processData: false,
       success: function(e){
       	console.log(e);
-        //$("#emailResp").html("El email no es VIP");
+        $("#emailResp").val(e);
+        if(e=="SI"){
+            $("#email").css("border","1px solid green");
+            $("#boton").attr("display","inline");
+        }
+        else{
+            $("#email").css("border,1px solid red");
+        }
 
-        if (e=="SI"){
-            $("#emailResp").html("");
-            $("#boton").attr("style", "visibility:visible");
-        }else{
-            $("#emailResp").html("El email no es VIP");
-            $("#boton").attr("style", "visibility:hidden");
 
         }
 
-      }
+
 
 
     });
 
+
 });
+function escapeRegExp(string){
+  return string.replace(/([.*+?^=!:${}()|\[\]\/\\])/g, "\\$1");
+}
 
 $("#pass1").blur(function(){
     console.log("entra");
 
     $.ajax({
-        url:"../php/ComprobarContrasena.php?pass"+$("#pass1").val(),
+        url:"../php/ComprobarContrasena.php?pass="+$("#pass1").val(),
         type:'GET',
         cache: false,
         contentType: false,
         processData: false,
         success: function(e){
-            console.log(e);
-           if(e=="VALIDA"){
+            console.log(escapeRegExp(e)=="VALIDA");
+           $("#passResp").val(escapeRegExp(e));
 
-               $("#boton").attr("disabled", "false");
-           }else{
+           if(escapeRegExp(e)=="VALIDA"){
+            $("#pass1").css("border","3px solid green");
+            $("#boton").css("visibility","visible");
 
-               $("#boton").attr("disabled", "true");
-           }
+        }
+        else{
+            $("#pass1").css("border,1px solid red");
+        }
+
         }
 
 
     });
+
 
 });
 

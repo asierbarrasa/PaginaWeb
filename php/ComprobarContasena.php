@@ -26,7 +26,7 @@ $server ->register('comprobarPass ',
         break;
       }
     }
-    return INVALIDA;
+    return "INVALIDA";
   }
 
  ?>

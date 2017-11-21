@@ -3,8 +3,9 @@
 
 
   $soapClient= new nusoap_client("http://localhost/PaginaWeb/php/ObtenerPreguntaSW.php?wsdl",true);
-    echo $soapClient->call('ObtenerPregunta', array('x'=>intval($_GET["id"])));
-    //echo  $result;
+
+  $res=$soapClient->call('ObtenerPregunta', array('x'=>intval($_GET["id"])));
+  echo  $res;
 
 
  ?>

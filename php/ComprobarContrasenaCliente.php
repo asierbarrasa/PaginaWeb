@@ -2,13 +2,11 @@
 require_once('../lib/nusoap.php');
 
 
-$soapClient= new nusoap_client("http://localhost/SW/php/ComprobarContasena.php?wsdl",true);
+$soapClient= new nusoap_client("https://adiazdeotazu.000webhostapp.com/web/php/ComprobarContraseña.php?wsdl",true);
 
-if(isset($_POST["pass1"])){
 
-    $result=$soapClient->call('comprobarPass', array('x'=>$_POST["pass1"]));
+    $result=$soapClient->call('ComprobarPass', "1111");
+print $result
 
-    print_r($result);
-}
 
 ?>

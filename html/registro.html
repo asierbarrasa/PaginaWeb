@@ -38,7 +38,7 @@
     <br>
     <input type = "file" id = "file" name = "imagen">
     <br>
-    <input type="submit" id="boton" value="Registrarse">
+    <input type="submit" id="boton" value="Registrarse" disabled="true" style="visibility:hidden">
 	</form>
   <div>
         <img src="" id="imagen" width="140px" height="140px">
@@ -75,6 +75,7 @@ $("#email").blur(function(){
       success: function(e){
       	console.log(e);
         $("#emailResp").html(e);
+          $("#boton").attr("style", "false");
       }
 
 
@@ -87,7 +88,7 @@ $("#pass1").blur(function(){
 
     var data = new FormData();
     data.append("pass1",$("#pass1").val());
-    console.log(data);
+
 
     $.ajax({
         url:"../php/ComprobarContrasenaCliente.php",
@@ -97,8 +98,11 @@ $("#pass1").blur(function(){
         contentType: false,
         processData: false,
         success: function(e){
-            console.log(e);
-           // $("#emailResp").html(e);
+
+            if(e=="VALIDA") {
+                $("#boton").attr("disabled", "visibility:visible");
+            }
+
         }
 
 

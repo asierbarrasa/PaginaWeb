@@ -74,12 +74,15 @@ $("#email").blur(function(){
       processData: false,
       success: function(e){
       	console.log(e);
-
+        //$("#emailResp").html("El email no es VIP");
 
         if (e=="SI"){
-            $("#boton").attr("style", "false");
+            $("#emailResp").html("");
+            $("#boton").attr("style", "visibility:visible");
         }else{
             $("#emailResp").html("El email no es VIP");
+            $("#boton").attr("style", "visibility:hidden");
+
         }
 
       }
@@ -92,23 +95,21 @@ $("#email").blur(function(){
 $("#pass1").blur(function(){
     console.log("entra");
 
-    var data = new FormData();
-    data.append("pass1",$("#pass1").val());
-
-
     $.ajax({
-        url:"../php/ComprobarContrasenaCliente.php",
-        type:'POST',
-        data: data,
+        url:"../php/ComprobarContrasena.php?pass"+$("#pass1").val(),
+        type:'GET',
         cache: false,
         contentType: false,
         processData: false,
         success: function(e){
+            console.log(e);
+           if(e=="VALIDA"){
 
-            if(e=="VALIDA") {
-                $("#boton").attr("disabled", "visibility:visible");
-            }
+               $("#boton").attr("disabled", "false");
+           }else{
 
+               $("#boton").attr("disabled", "true");
+           }
         }
 
 

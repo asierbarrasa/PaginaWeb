@@ -197,7 +197,6 @@
 
 
 
-
     function validateEmail(){
       var email=$("#email").val();
       var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|eus]");

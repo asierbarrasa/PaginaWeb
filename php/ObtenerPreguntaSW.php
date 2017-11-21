@@ -1,5 +1,4 @@
-<?
-php
+<?php
 //incluimos la clase nusoap.php
 require_once
 ('../lib/nusoap.php');
@@ -18,9 +17,9 @@ $server ->register('ObtenerPregunta ',
 //implementamos la función
 function ObtenerPregunta($x){
 
+}
+
 //llamamos al método service de la clase nusoap
-$HTTP_RAW_POST_DATA =
-    isset
-    ($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
+$HTTP_RAW_POST_DATA = isset ($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
 $server ->service($HTTP_RAW_POST_DATA);
 ?>

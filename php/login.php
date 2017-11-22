@@ -13,6 +13,10 @@ if(mysqli_num_rows ($result)==1){
       $aux=$numUsuario+1;
       $xml->numero[0]=$aux;
       $xml->asXML("../assets/xml/usuariosActivos.xml");
+      session_start();
+      $_SESSION["email"]=$email;
+      $_SESSION["img"]=$row["img"];
+      
 
       echo "0";
       exit;

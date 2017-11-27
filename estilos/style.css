@@ -107,3 +107,28 @@ nav span {
   top: 200px;
   right: 80px;
 }
+
+#revisarPregunta{
+  margin-left: 200px;
+  position: relative;
+
+}
+#Enviar2{
+  margin-left: 200px;
+}
+
+#s2{
+  position:relative;
+}
+
+#flotante{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 30%;
+  height: 85%;
+  border: solid;
+  border-color: black;
+
+
+}

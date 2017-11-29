@@ -39,7 +39,7 @@
          <label>Tema: </label> <input id="tema" placeholder="">
         </div>
 
-        <input type="submit" id="Enviar2" value="Modificar">
+        <input type="submit" id="btn" value="Modificar">
       </form>
 
       <br>
@@ -58,27 +58,28 @@
 
     <script>
 
-
-
-   var r=  <?php
-
-    $link = mysqli_connect("localhost", "id2921858_swg26","*****","id2921858_quiz");
-    $datos = mysqli_query($link, "select * from Pregunta");
-    echo datos;
+      //Script quue carga todas las preguntas en una variable
+    var r=  <?php
+      $link = mysqli_connect("localhost", "id2921858_swg26","*****","id2921858_quiz");
+      $datos = mysqli_query($link, "select * from Pregunta");
+      echo datos;
     ?>
 
    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script>
         $("#btn").click(function(){
+            var data = new FormData(this);
 
             $.ajax({
-                url:"http://adiazdeotazu.000webhostapp.com/web/php/ObtenerPregunta.php?id="+$("#ID").val(),
-                beforeSend: function(){$("#resp").html("<img src = '../assets/Imagenes/carga.gif' width='50px' height='50px'/>")},
-                type:'GET',
+                url:"http://adiazdeotazu.000webhostapp.com/web/php/ActualizarPregunta.php"
+                data:data,
+                type:'POST',
+                processData: false,
                 cache: false,
+                contentType: false,
                 success: function(e){
-                    $("#resp").html(e);
+
 
                 }
 

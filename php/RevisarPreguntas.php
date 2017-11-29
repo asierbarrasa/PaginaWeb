@@ -35,7 +35,7 @@
          <label>Respuesta Incorrecta 1: </label> <input id="respInc1" placeholder="">
          <label>Respuesta Incorrecta 2: </label> <input id="respInc2" placeholder="">
          <label>Respuesta Incorrecta 3: </label> <input id="respInc3" placeholder="">
-         <label>Dificultad: </label> <input id="Dificultad" placeholder="">
+         <label>Dificultad: </label> <input id="dificultad" placeholder="">
          <label>Tema: </label> <input id="tema" placeholder="">
         </div>
 

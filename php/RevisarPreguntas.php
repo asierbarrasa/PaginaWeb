@@ -1,3 +1,4 @@
+<?php include("Control.php") ?>
 <!DOCTYPE html>
 <html>
 
@@ -13,20 +14,23 @@
 <body>
 <div id='page-wrap'>
     <header class='main' id='h1'>
-        <?php echo $_GET["email"]?> <img id="imgUser" src= '<?php echo $_GET['img']?>' width = '50px' heigth= '50px'><br>
+        <?php echo $_SESSION["email"]?> <img id="imgUser" src= '<?php echo $_SESSION['img']?>' width = '50px' heigth= '50px'><br>
         <span class="right"><a href="logOut.php">Logout</a></span>
         <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>
-        <span><a href='layoutUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Inicio</a></span>
-        <span><a href='GestionPreguntas.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Gestionar Preguntas</a></span>
-        <span><a href ='ObtenerDatos.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Consultar usuarios</a></span>
-        <span><a href='ObtenerPreguntaUI.php?<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Obtener Preguntas UI</a></span>
+<span><a href='layoutUser.php'>Inicio</a></span>
+      <span><a href='GestionPreguntas.php'>Gestionar Preguntas</a></span>
+        <span><a href ='ObtenerDatos.php'>Consultar usuarios</a></span>
+        <span><a href='ObtenerPreguntaUI.php'>Obtener Preguntas UI</a></span>
+        <span id="revisarPreg" style="visibility: hidden;"><a href='RevisarPreguntas.php'>Revisar Preguntas</a></span>
 
-        <span><a href='creditosUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Creditos</a></span>
+      <span><a href='creditosUser.php'>Creditos</a></span>
     </nav>
 
     <section class="main" id="s2">
+    <div id="flotante"><select id= 'ids' placeholder = 'Selecciona una pregunta...' ></select></div>
+
       <form id="form">
         <div id="revisarPregunta">
          <label>Email: </label> <input id="email" placeholder="" readonly>
@@ -48,7 +52,6 @@
       <h5 id="LetraPequeña">*Los campos que no se modifiquen se enviaran con el valor anterior </h5>
 
 
-      <div id="flotante"><select id= 'ids' placeholder = 'Selecciona una pregunta...' ></selection></div>
     </section>
 
     <footer class='main' id='f1'>
@@ -62,9 +65,9 @@
       //Script quue carga todas las preguntas en una variable
     $(document).ready(function(){
     var r=  "<?php
-      $link = mysqli_connect("localhost", "id2921858_swg26","***","id2921858_quiz");
+      $link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
       $datos = mysqli_query($link, "select * from Pregunta");
-
+      
       while($row = mysqli_fetch_array($datos)){
     echo "<option>$row[id]</option>";}
     ?>";
@@ -97,7 +100,7 @@ $("#ids").change(function(){
 
 });
    </script>
-
+   
 
     <script>
         function formatInput(id){
@@ -106,8 +109,8 @@ $("#ids").change(function(){
           }
           return $("#"+id).val();
         }
-
-
+        
+        
         $("#btn").click(function(event){
             event.preventDefault();
             var data = new FormData();
@@ -144,8 +147,14 @@ $("#ids").change(function(){
             $("#email").attr("placeholder","");
         });
 
+        
 
-
-    </script>
+    </script><script>
+    $(document).ready(function(){
+        if("<?php echo $_SESSION["email"]?>" == "web000@ehu.es"){
+            $("#revisarPreg").css("visibility","visible");
+        }
+    })
+</script>
 </body>
 </html>

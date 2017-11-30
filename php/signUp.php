@@ -1,6 +1,7 @@
 <?php
+$passHash=crypt($_POST["pass1"],"Ap");
 
-$link = mysqli_connect("localhost", "id2921858_swg26","*******","id2921858_quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
 
 $datetime = date("YmdH:m:s");
 $img="";
@@ -15,7 +16,7 @@ if (is_uploaded_file($_FILES["imagen"]["tmp_name"]))
 }
 }
 $sql = "INSERT INTO Users(email,pass,name,lastname,img) VALUES ('".$_POST["email"]
-."', '".$_POST["pass1"]."', '".$_POST["nombre"]."', '".$_POST["apellido"]."','".$img."')";
+."', '".$passHash."', '".$_POST["nombre"]."', '".$_POST["apellido"]."','".$img."')";
 
   $xml = simplexml_load_file("usuarios.xml");
   $usuario=$xml->addChild('usuario');

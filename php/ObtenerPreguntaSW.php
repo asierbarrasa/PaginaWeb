@@ -18,12 +18,12 @@ $server ->register('ObtenerPregunta',
 //implementamos la función
 function ObtenerPregunta($x){
 
-  $link = mysqli_connect("localhost", "id2921858_swg26","*******","id2921858_quiz");
+  $link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
   $sql = "select * from Pregunta Where id = $x";
   $datos = mysqli_query($link, $sql);
 
   $row = mysqli_fetch_assoc($datos);
-
+  
     return array('z'=> "$row[enunciado]", 'y'=> "$row[respCorrecta]", 'c'=> "$row[complejidad]" );
 
 

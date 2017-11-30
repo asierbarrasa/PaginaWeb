@@ -20,12 +20,13 @@
       <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>
-      <span><a href='layoutUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Inicio</a></span>
-      <span><a href='GestionPreguntas.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Gestionar Preguntas</a></span>
-        <span><a href ='ObtenerDatos.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Consultar usuarios</a></span>
-        <span><a href='ObtenerPreguntaUI.php?<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Obtener Preguntas UI</a></span>
+      <span><a href='layoutUser.php'>Inicio</a></span>
+      <span><a href='GestionPreguntas.php'>Gestionar Preguntas</a></span>
+        <span><a href ='ObtenerDatos.php'>Consultar usuarios</a></span>
+        <span><a href='ObtenerPreguntaUI.php'>Obtener Preguntas UI</a></span>
+        <span id="revisarPreg" style="visibility: hidden;"><a href='RevisarPreguntas.php'>Revisar Preguntas</a></span>
 
-      <span><a href='creditosUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Creditos</a></span>
+      <span><a href='creditosUser.php'>Creditos</a></span>
 
 
 	</nav>
@@ -40,5 +41,13 @@
 		<a href='https://github.com'>Link GITHUB</a>
 	</footer>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        if("<?php echo $_SESSION["email"]?>" == "web000@ehu.es"){
+            $("#revisarPreg").css("visibility","visible");
+        }
+    })
+</script>
 </body>
 </html>

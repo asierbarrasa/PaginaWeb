@@ -37,6 +37,7 @@
           <br>
           <input type="submit" id="boton" value="Ingresar">
         </form>
+         <span><a href='RecuperarContraseña.html'>¿Has olvidado tu contraseña?</a></span>
 
       </div>
     </section>
@@ -52,9 +53,6 @@
     $("#flogin").submit(function() {
       if (!requiredField("email")) {
         alert("Introuce un email");
-        event.preventDefault();
-      } else if (!validateEmail()) {
-        alert("Introduce un email valido");
         event.preventDefault();
       } else if (!requiredField("pass1")) {
         alert("Introduce tu contraseña");

@@ -1,13 +1,13 @@
 <?php
 $email = $_POST["email"];
 $pass = $_POST["pass"];
-$link = mysqli_connect("localhost", "id2921858_swg26","*****","id2921858_quiz");
+$link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
 
 $sql = "Select * FROM Users Where email = '".$email."'";
 $result = mysqli_query($link, $sql);
 $row = mysqli_fetch_assoc($result);
 if(mysqli_num_rows ($result)==1){
-  if ($row["email"] == $email && $row["pass"] == $pass){
+  if ($row["email"] == $email && ($row["pass"] == (crypt($pass,$row["pass"])))){
       $xml = simplexml_load_file("../assets/xml/usuariosActivos.xml");
       $numUsuario =$xml->numero[0];
       $aux=$numUsuario+1;

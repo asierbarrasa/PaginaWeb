@@ -80,11 +80,13 @@ $("#email").blur(function(){
       	console.log(e);
         $("#emailResp").val(e);
         if(e=="SI"){
-            $("#email").css("border","1px solid green");
+            $("#email").css("border","3px solid green");
             $("#boton").attr("display","inline");
         }
         else{
-            $("#email").css("border,1px solid red");
+            $("#email").css("border","3px solid red");
+            $("#boton").attr("display","none");
+            
         }
 
 
@@ -93,8 +95,8 @@ $("#email").blur(function(){
 
 
 
-    });
-
+   });
+   
 
 });
 function escapeRegExp(string){
@@ -113,21 +115,22 @@ $("#pass1").blur(function(){
         success: function(e){
             console.log(escapeRegExp(e)=="VALIDA");
            $("#passResp").val(escapeRegExp(e));
-
+           
            if(escapeRegExp(e)=="VALIDA"){
             $("#pass1").css("border","3px solid green");
             $("#boton").css("visibility","visible");
-
+            
         }
         else{
-            $("#pass1").css("border,1px solid red");
+            $("#pass1").css("border","3px solid red");
+            $("#boton").css("visibility","initial");
         }
 
         }
 
 
     });
-
+   
 
 });
 

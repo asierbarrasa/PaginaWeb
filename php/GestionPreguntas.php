@@ -1,3 +1,4 @@
+<?php include("Control.php") ?>
 <!DOCTYPE html>
 <html>
 
@@ -13,18 +14,19 @@
 <body>
 <div id='page-wrap'>
     <header class='main' id='h1'>
-        <?php echo $_GET["email"]?> <img id="imgUser" src= '<?php echo $_GET['img']?>' width='50px' height='50px'><br>
+        <?php echo $_SESSION["email"]?> <img id="imgUser" src= '<?php echo $_SESSION['img']?>' width='50px' height='50px'><br>
         <span class="right" ><a href="logOut.php">Logout</a></span>
 
         <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>
-        <span><a href='layoutUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Inicio</a></span>
-        <span><a href='GestionPreguntas.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Gestionar Preguntas</a></span>
-          <span><a href ='ObtenerDatos.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Consultar usuarios</a></span>
-          <span><a href='ObtenerPreguntaUI.php?<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Obtener Preguntas UI</a></span>
+       <span><a href='layoutUser.php'>Inicio</a></span>
+      <span><a href='GestionPreguntas.php'>Gestionar Preguntas</a></span>
+        <span><a href ='ObtenerDatos.php'>Consultar usuarios</a></span>
+        <span><a href='ObtenerPreguntaUI.php'>Obtener Preguntas UI</a></span>
+        <span id="revisarPreg" style="visibility: hidden;"><a href='RevisarPreguntas.php'>Revisar Preguntas</a></span>
 
-        <span><a href='creditosUser.php?email=<?php echo $_GET['email']?>&img=<?php echo $_GET['img']?>'>Creditos</a></span>
+      <span><a href='creditosUser.php'>Creditos</a></span>
 
 
     </nav>
@@ -34,7 +36,7 @@
 
         <div>
             <form id="fpreguntas" name="fpreguntas"  method="post" enctype="multipart/form-data">
-                <label>Dirección de correo * :</label><input type="text" name="email" id="email" value ='<?php echo $_GET["email"]?>'><br>
+                <label>Dirección de correo * :</label><input type="text" name="email" id="email" readonly value ='<?php echo $_SESSION["email"]?>'><br>
                 <label>Enunciado de la pregunta * :</label><input type="text" name="preg" id="preg"><br>
                 <label>Respuesta correcta * :</label><input type="text" name="respC" id="respC"><br>
                 <label>Respueta incorrecta 1 * :</label><input type="text" name="respI1" id="respI1"><br>
@@ -170,7 +172,7 @@
     function getNumPregUs() {
 
         $.ajax({
-            url: "ContadorPreguntasUsuario.php?email=<?php echo $_GET["email"]?>",
+            url: "ContadorPreguntasUsuario.php?email=<?php echo $_SESSION["email"]?>",
             type: 'GET',
             processData: false,
             cache: false,
@@ -239,6 +241,13 @@
     }
 
 
+</script>
+<script>
+    $(document).ready(function(){
+        if("<?php echo $_SESSION["email"]?>" == "web000@ehu.es"){
+            $("#revisarPreg").css("visibility","visible");
+        }
+    })
 </script>
 </body>
 </html>

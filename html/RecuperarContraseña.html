@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+  <title>Login</title>
+  <link rel='stylesheet' type='text/css' href='../estilos/style.css' />
+  <link rel='stylesheet' type='text/css' media='only screen and (min-width: 530px) and (min-device-width: 481px)' href='../estilos/wide.css' />
+  <link rel='stylesheet' type='text/css' media='only screen and (max-width: 480px)' href='../estilos/smartphone.css' />
+  <script type="text/javascript"></script>
+</head>
+
+<body>
+
+
+  <div id='page-wrap'>
+    <header class='main' id='h1'>
+      <span class="right"><a href="registro.html">Registrarse</a></span>
+      <span class="right"><a href="login.html">Login</a></span>
+      <span class="right" style="display:none;"><a href="/logout">Logout</a></span>
+      <h2>Quiz: el juego de las preguntas</h2>
+    </header>
+    <nav class='main' id='n1' role='navigation'>
+      <span><a href='layout.html'>Inicio</a></span>
+      <span><a href='creditos.html'>Creditos</a></span>
+    </nav>
+
+
+    <section class="main" id="s1">
+
+      <div id="mens">
+        <form id="form" name="flogin" action="" method="post" enctype="multipart/form-data">
+          <label>Introduce tu direccion de correo * :</label><input type="email" name="email" id="email" required><br>
+          <br>
+          <input type="submit" id="boton" value="Recuperar contraseña">
+        </form>
+
+      </div>
+    </section>
+    <footer class='main' id='f1'>
+      <p><a href="http://es.wikipedia.org/wiki/Quiz" target="_blank">Que es un Quiz?</a></p>
+      <a href='https://github.com'>Link GITHUB</a>
+    </footer>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script>
+  $("#form").submit(function(event){
+    event.preventDefault();
+    $.ajax({
+      url:"../php/EnviarRestablecerPass.php?email="+$("#email").val(),
+      type:'GET',
+      processData: false,
+      cache: false,
+      contentType: false,
+      success: function(e){
+        $("#mens").html("<p><strong>TE HEMOS ENVIADO UN EMAIL DE RECUPERACION, REVISA TU CORREO.");
+      }
+    });
+  });
+
+  </script>
+
+
+</body>
+
+
+
+</html>

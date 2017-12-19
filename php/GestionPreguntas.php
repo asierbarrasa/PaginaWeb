@@ -55,7 +55,7 @@
                 <input type="button" id="btnPreguntas" value="Ver preguntas">
                 <br><br>
                 <input type="text" id="idAeliminar" name="idAeliminar"><br><br>
-                <input type="button" id="btnEliminar" value="Eliminar pregunta">
+
                 <br>
                 <br>
                 <div id="numUsuarios"></div>
@@ -159,31 +159,7 @@
        });
      });
 
-    $("#btnEliminar").click(function(){
-        $.ajax({
 
-            var data = new FormData();
-        data.append("id", $("#id").val());
-            url:"EliminarPregunta.php",
-            type:'POST',
-            processData: false,
-            cache: false,
-            contentType: false,
-            success: function(e){
-            $.ajax({
-                url:"VerPreguntasConFoto.php",
-                type:'POST',
-                processData: false,
-                cache: false,
-                contentType: false,
-                success: function(e){
-                    $("#ajax").html(e);
-                }
-            });
-        });
-            }
-        });
-    });
 
     $("#fileInput").change(function(){
         var exp = $("#fileInput")[0].files;

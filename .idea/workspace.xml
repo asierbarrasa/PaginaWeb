@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf9696ab-d33d-4555-93d7-5423bcd98f33" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/php/EliminarPregunta.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/GestionPreguntas.php" afterPath="$PROJECT_DIR$/php/GestionPreguntas.php" />
-      <change beforePath="$PROJECT_DIR$/php/VerPreguntasConFoto.php" afterPath="$PROJECT_DIR$/php/VerPreguntasConFoto.php" />
+      <change beforePath="$PROJECT_DIR$/php/RevisarPreguntas.php" afterPath="$PROJECT_DIR$/php/RevisarPreguntas.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,13 +31,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RevisarPreguntas.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RevisarPreguntas.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/RevisarPreguntas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="141">
+              <caret line="154" column="37" lean-forward="false" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
               <folding>
-                <marker date="1513692756547" expanded="true" signature="2978:3000" ph="select * fro... Pregunta" />
+                <marker date="1513712119720" expanded="true" signature="3057:3079" ph="select * fro... Pregunta" />
               </folding>
             </state>
           </provider>
@@ -47,8 +46,8 @@
       <file leaf-file-name="GestionPreguntas.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/GestionPreguntas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3094">
-              <caret line="182" column="11" lean-forward="false" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
+            <state relative-caret-position="39">
+              <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -78,11 +77,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EliminarPregunta.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EliminarPregunta.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/EliminarPregunta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="61" lean-forward="false" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
+            <state relative-caret-position="85">
+              <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
               <folding>
                 <marker date="1513706552523" expanded="true" signature="103:130" ph="Select * fro... Pregunta" />
               </folding>
@@ -176,10 +175,10 @@
         <option value="$PROJECT_DIR$/php/login.php" />
         <option value="$PROJECT_DIR$/php/ObtenerDatos.php" />
         <option value="$PROJECT_DIR$/php/layoutUser.php" />
-        <option value="$PROJECT_DIR$/php/RevisarPreguntas.php" />
         <option value="$PROJECT_DIR$/php/VerPreguntasConFoto.php" />
-        <option value="$PROJECT_DIR$/php/GestionPreguntas.php" />
         <option value="$PROJECT_DIR$/php/EliminarPregunta.php" />
+        <option value="$PROJECT_DIR$/php/GestionPreguntas.php" />
+        <option value="$PROJECT_DIR$/php/RevisarPreguntas.php" />
       </list>
     </option>
   </component>
@@ -323,7 +322,7 @@
       <workItem from="1510594971289" duration="16962000" />
       <workItem from="1512082459983" duration="242000" />
       <workItem from="1512588330553" duration="80000" />
-      <workItem from="1513692129461" duration="3709000" />
+      <workItem from="1513692129461" duration="5043000" />
     </task>
     <task id="LOCAL-00001" summary="php">
       <created>1509439932033</created>
@@ -486,11 +485,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513693543584</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Eliminar">
+      <created>1513706568605</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1513706568605</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60134000" />
+    <option name="totallyTimeSpent" value="61468000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -568,7 +574,8 @@
     <MESSAGE value="ajax" />
     <MESSAGE value="." />
     <MESSAGE value="Lab Seguridad" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab Seguridad" />
+    <MESSAGE value="Eliminar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Eliminar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -914,16 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/RevisarPreguntas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1513692756547" expanded="true" signature="2978:3000" ph="select * fro... Pregunta" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/VerPreguntasConFoto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -972,20 +969,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/EliminarPregunta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding>
+            <marker date="1513706552523" expanded="true" signature="103:130" ph="Select * fro... Pregunta" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/GestionPreguntas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3094">
-          <caret line="182" column="11" lean-forward="false" selection-start-line="182" selection-start-column="11" selection-end-line="182" selection-end-column="11" />
+        <state relative-caret-position="39">
+          <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/EliminarPregunta.php">
+    <entry file="file://$PROJECT_DIR$/php/RevisarPreguntas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="61" lean-forward="false" selection-start-line="1" selection-start-column="61" selection-end-line="1" selection-end-column="61" />
+        <state relative-caret-position="141">
+          <caret line="154" column="37" lean-forward="false" selection-start-line="154" selection-start-column="37" selection-end-line="154" selection-end-column="37" />
           <folding>
-            <marker date="1513706552523" expanded="true" signature="103:130" ph="Select * fro... Pregunta" />
+            <marker date="1513712119720" expanded="true" signature="3057:3079" ph="select * fro... Pregunta" />
           </folding>
         </state>
       </provider>

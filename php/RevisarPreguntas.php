@@ -43,7 +43,8 @@
          <label>Tema: </label> <input id="tema" placeholder="">
         </div>
 
-        <input type="submit" id="btn" value="Modificar">
+        <input type="submit" id="btn" value="Modificar"><br>
+          <input type="button" id="btnEliminar" value="Eliminar pregunta">
       </form>
 
       <br>
@@ -145,6 +146,32 @@ $("#ids").change(function(){
             $("#complejidad").attr("placeholder","");
             $("#tema").attr("placeholder","");
             $("#email").attr("placeholder","");
+        });
+
+        $("#btnEliminar").click(function(){
+            $.ajax({
+
+                var data = new FormData();
+            data.append("id", $("#ids").val());
+            url:"EliminarPregunta.php",
+                type:'POST',
+                processData: false,
+                cache: false,
+                contentType: false,
+                success: function(e){
+                $.ajax({
+                    url:"VerPreguntasConFoto.php",
+                    type:'POST',
+                    processData: false,
+                    cache: false,
+                    contentType: false,
+                    success: function(e){
+                        $("#ajax").html(e);
+                    }
+                });
+            });
+        }
+        });
         });
 
         

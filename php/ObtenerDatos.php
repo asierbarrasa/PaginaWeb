@@ -1,4 +1,4 @@
-<?php include("Control.php") ?>
+
 <!DOCTYPE html>
 <html>
 

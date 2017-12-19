@@ -2,56 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf9696ab-d33d-4555-93d7-5423bcd98f33" name="Default" comment="Lab Seguridad">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/imagenesPreguntas/msg_message_14385.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/imagenesUsuarios/2017111420%3A11%3A18" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/pdf/TareaOp1.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/pdf/TareaOp2.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/pdf/tareaopcional1.pdf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/SW.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/ajax.patch" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/changelog" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.nusoap_base.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.soap_fault.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.soap_parser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.soap_server.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.soap_transport_http.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.soap_val.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.soapclient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.wsdl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.wsdlcache.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/class.xmlschema.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/nusoap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/lib/nusoapmime.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/client1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/client2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/client3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/getfile1client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/getfile2client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/mimeclient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/sslclient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient1.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient10.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient11.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient12.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient13.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient14.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient15.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient2.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient3.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient3b.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient3c.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient4.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient5.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient6.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient7.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient8.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/nusoap-0/samples/wsdlclient9.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/ComprobarContrasena.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/ComprobarContrasenaSW.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/SW.iml" afterPath="$PROJECT_DIR$/.idea/SW.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/php/GestionPreguntas.php" afterPath="$PROJECT_DIR$/php/GestionPreguntas.php" />
+      <change beforePath="$PROJECT_DIR$/php/ObtenerDatos.php" afterPath="$PROJECT_DIR$/php/ObtenerDatos.php" />
+      <change beforePath="$PROJECT_DIR$/php/RevisarPreguntas.php" afterPath="$PROJECT_DIR$/php/RevisarPreguntas.php" />
+      <change beforePath="$PROJECT_DIR$/php/layoutUser.php" afterPath="$PROJECT_DIR$/php/layoutUser.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -68,84 +24,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="preguntaUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/preguntaUser.php">
+      <file leaf-file-name="ContadorPreguntasUsuario.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/ContadorPreguntasUsuario.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="75" lean-forward="false" selection-start-line="26" selection-start-column="75" selection-end-line="26" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="signUp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/signUp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="38" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1512063978000" expanded="true" signature="602:759" ph="INSERT INTO Users... " />
-                <marker date="1512063978000" expanded="true" signature="694:759" ph="INSERT INTO Users... " />
+                <marker date="1510687455000" expanded="true" signature="95:150" ph="Select * fro... Pregunta" />
+                <marker date="1510687455000" expanded="true" signature="162:184" ph="Select * fro... Pregunta" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nusoap.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/nusoap.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32164">
-              <caret line="1927" column="12" lean-forward="false" selection-start-line="1927" selection-start-column="12" selection-end-line="1927" selection-end-column="12" />
-              <folding>
-                <marker date="1511279833000" expanded="true" signature="77635:77818" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="78087:78223" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="225693:229169" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="225699:228908" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="225774:227139" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="226233:226278" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="226290:226509" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="226523:226708" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="226723:226958" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="227195:228898" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="227252:227975" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="228059:228390" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="228393:228513" ph="//..." />
-                <marker date="1511279833000" expanded="true" signature="228540:228642" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="228702:228789" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="228740:228785" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="228809:228879" ph="{...}" />
-                <marker date="1511279833000" expanded="true" signature="228917:229169" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="228939:229169" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="229023:229169" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="229031:229160" ph="..." />
-                <marker date="1511279833000" expanded="false" signature="229141:229147" ph="'" />
-                <marker date="1511279833000" expanded="true" signature="229396:229482" ph="..." />
-                <marker date="1511279833000" expanded="true" signature="229926:229932" ph=" " />
-                <marker date="1511279833000" expanded="true" signature="229932:229938" ph=" " />
-                <marker date="1511279833000" expanded="true" signature="230118:230124" ph=" " />
-                <marker date="1511279833000" expanded="true" signature="230124:230130" ph=" " />
-                <marker date="1511279833000" expanded="true" signature="230130:230136" ph=" " />
-                <marker date="1511279833000" expanded="true" signature="230136:230142" ph=" " />
-                <marker date="1511279833000" expanded="true" signature="230295:230301" ph=" " />
-                <marker date="1511279833000" expanded="true" signature="230301:230307" ph=" " />
-                <marker date="1511279833000" expanded="true" signature="230591:230624" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComprobarContrasena.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/php/ComprobarContrasena.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ComprobarContrasenaSW.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/ComprobarContrasenaSW.php">
+      <file leaf-file-name="layoutUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/layoutUser.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -154,41 +47,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layoutUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/layoutUser.php">
+      <file leaf-file-name="RevisarPreguntas.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/RevisarPreguntas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1513692756547" expanded="true" signature="2978:3000" ph="select * fro... Pregunta" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GestionPreguntas.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/GestionPreguntas.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2219">
+              <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/login.php">
+      <file leaf-file-name="VerPreguntasConFoto.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/VerPreguntasConFoto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="80" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="80" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/html/login.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="89" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnviarRestablecerPass.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/EnviarRestablecerPass.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -201,6 +86,48 @@
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <marker date="1512062101000" expanded="true" signature="181:221" ph="Select 'emai... Users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObtenerPreguntaUI.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/ObtenerPreguntaUI.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObtenerDatos.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/ObtenerDatos.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObtenerPregunta.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/ObtenerPregunta.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObtenerPreguntaSW.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/ObtenerPreguntaSW.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1511287178000" expanded="true" signature="708:742" ph="select * fro... Pregunta" />
               </folding>
             </state>
           </provider>
@@ -220,9 +147,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/php/RevisarPreguntas.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/php/GestionPreguntas.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/html/login.html" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/php/RevisarPreguntas.php" root0="SKIP_INSPECTION" root1="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -241,14 +168,15 @@
         <option value="$PROJECT_DIR$/php/VerPreguntasConFoto.php" />
         <option value="$PROJECT_DIR$/php/InsertarPreguntaConFoto.php" />
         <option value="$PROJECT_DIR$/php/usuariosActivos.xml" />
-        <option value="$PROJECT_DIR$/php/layoutUser.php" />
         <option value="$PROJECT_DIR$/php/logOut.php" />
         <option value="$PROJECT_DIR$/assets/xml/usuariosActivos.xml" />
         <option value="$PROJECT_DIR$/php/creditosUser.php" />
         <option value="$PROJECT_DIR$/php/preguntaUser.php" />
         <option value="$PROJECT_DIR$/php/verUsuariosActivos.php" />
-        <option value="$PROJECT_DIR$/php/ObtenerDatos.php" />
         <option value="$PROJECT_DIR$/php/login.php" />
+        <option value="$PROJECT_DIR$/php/ObtenerDatos.php" />
+        <option value="$PROJECT_DIR$/php/layoutUser.php" />
+        <option value="$PROJECT_DIR$/php/RevisarPreguntas.php" />
         <option value="$PROJECT_DIR$/php/GestionPreguntas.php" />
       </list>
     </option>
@@ -295,14 +223,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="SW" type="b2602c69:ProjectViewProjectNode" />
               <item name="SW" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SW" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="xml" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="SW" type="b2602c69:ProjectViewProjectNode" />
@@ -318,6 +255,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -345,7 +284,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.layout.html">
+  <component name="RunManager">
     <configuration name="layout.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/SW/html/layout.html" />
     <recent_temporary>
       <list size="1">
@@ -355,6 +294,9 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -377,7 +319,9 @@
       <workItem from="1510091800112" duration="5023000" />
       <workItem from="1510140913469" duration="20000" />
       <workItem from="1510594971289" duration="16962000" />
-      <workItem from="1512082459983" duration="183000" />
+      <workItem from="1512082459983" duration="242000" />
+      <workItem from="1512588330553" duration="80000" />
+      <workItem from="1513692129461" duration="1107000" />
     </task>
     <task id="LOCAL-00001" summary="php">
       <created>1509439932033</created>
@@ -526,11 +470,18 @@
       <option name="project" value="LOCAL" />
       <updated>1512081188352</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Lab Seguridad">
+      <created>1512082682692</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1512082682694</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56286000" />
+    <option name="totallyTimeSpent" value="57532000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -538,14 +489,15 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19180088" sideWeight="0.48387095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.042121686" sideWeight="0.5146413" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13416536" sideWeight="0.49121523" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13416536" sideWeight="0.49121523" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19818456" sideWeight="0.516129" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19818456" sideWeight="0.516129" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.48243046" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -614,34 +566,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/registro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/layout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/prueba.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -664,13 +588,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/ampq/amqp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2091">
-          <caret line="127" column="6" lean-forward="false" selection-start-line="127" selection-start-column="6" selection-end-line="127" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/ampq/amqp.php" />
     <entry file="file://$PROJECT_DIR$/html/layout.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="49">
@@ -736,13 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/VerPreguntasConFoto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/xml/preguntas2.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -793,14 +704,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/layoutUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/xml/usuariosActivos.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -812,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="49" lean-forward="true" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -820,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -855,14 +756,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/ObtenerDatos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="45" lean-forward="false" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/preguntaUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -875,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -890,22 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="229">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/ContadorPreguntasUsuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/GestionPreguntas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2108">
-          <caret line="187" column="31" lean-forward="false" selection-start-line="187" selection-start-column="31" selection-end-line="187" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -994,6 +870,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/ComprobarContrasena.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="3" lean-forward="false" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ContadorPreguntasUsuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1510687455000" expanded="true" signature="95:150" ph="Select * fro... Pregunta" />
+            <marker date="1510687455000" expanded="true" signature="162:184" ph="Select * fro... Pregunta" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/RestablecerPass.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1004,10 +899,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/ComprobarContrasena.php">
+    <entry file="file://$PROJECT_DIR$/php/ObtenerPreguntaUI.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ObtenerPregunta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ObtenerPreguntaSW.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1511287178000" expanded="true" signature="708:742" ph="select * fro... Pregunta" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/ObtenerDatos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/layoutUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/RevisarPreguntas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1513692756547" expanded="true" signature="2978:3000" ph="select * fro... Pregunta" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/GestionPreguntas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2219">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/VerPreguntasConFoto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="55" />
           <folding />
         </state>
       </provider>

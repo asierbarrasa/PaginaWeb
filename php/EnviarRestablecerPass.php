@@ -6,6 +6,6 @@ $msg = "Para recuperar la contraseña pulsa en este link adiazdeotazu.000webhost
 
 $headers = 'FROM: <no-reply@adiazdeotazu.com>'."\r\n";
 
-mail("defcom32@gmail.com","Recuperar contraseña",$msg,$headers);
+mail($email,"Recuperar contraseña",$msg,$headers);
 
  ?>

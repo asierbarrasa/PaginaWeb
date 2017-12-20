@@ -1,4 +1,5 @@
-
+<?php include("Control.php") ?>
+<?php if ($_SESSION["email"]!="web000@ehu.es"){header("Location: ../html/login.html");}?>
 <!DOCTYPE html>
 <html>
 

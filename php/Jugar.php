@@ -37,10 +37,10 @@
 
             <div id="radButton">
             <!--Al tener el mismo name quedan agrupados-->
-            <input type="radio" name="respuesta" value=""><br>
-            <input type="radio" name="respuesta" value=""><br>
-            <input type="radio" name="respuesta" value=""><br>
-            <input type="radio" name="respuesta" value="">
+            <input type="radio" name="respuesta" value="" id="1"><br>
+            <input type="radio" name="respuesta" value="" id="2"><br>
+            <input type="radio" name="respuesta" value="" id="3"><br>
+            <input type="radio" name="respuesta" value="" id="4">
             </div>
             <br><br>
             <label id="respuesta"></label>
@@ -65,14 +65,38 @@
         }
     })
     $("#corregir").click(function(){
+        var data = new FormData();
+
+
+        if ($("#1").checked){
+            data.append("respuesta",$("#1").value);
+        }else if($("#2").checked){
+            data.append("respuesta",$("#1").value);
+
+        }else if($("#3").checked)  {
+            data.append("respuesta",$("#1").value);
+
+        }else if($("#4").checked){
+            data.append("respuesta",$("#1").value);
+
+        }else{
+            $("#respuesta").html("Ninguna respuesta selecionada");
+        }
         $.ajax({
+
             url:"Corregir.php",
             type:'POST',
+            data: data,
             processData: false,
             cache: false,
             contentType: false,
             success: function(e){
-                $("#respuesta").html(e);
+                if (e != "correcto") {
+                    $("#respuesta").html("Corecto");
+
+                }else{
+                    $("#respuesta").html("Incorecto");
+                }
             }
         });
     });

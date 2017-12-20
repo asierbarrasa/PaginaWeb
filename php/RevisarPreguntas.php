@@ -152,21 +152,32 @@ $("#ids").change(function(){
         });
 
         $("#btnEliminar").click(function(){
+            console.log("Eliminar pregunta: "+$("#ids option:selected").val());
           var data = new FormData();
       data.append("id", $("#ids option:selected").val());
             $.ajax({
                 url:"EliminarPregunta.php",
                 type:'POST',
+                data: data,
                 processData: false,
                 cache: false,
                 contentType: false,
                 success: function(e){
                 $("#feebback").html("Pregunta Eliminada correctamente.");
+                var r=  "<?php
+                 $link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
+                 $datos = mysqli_query($link, "select * from Pregunta");
 
-            });
-        }
+                 while($row = mysqli_fetch_array($datos)){
+                 echo "<option>$row[id]</option>";}
+                  ?>";
+                 console.log(r);
+                   $("#ids").html(r);
+            }
+
         });
         });
+
 
 
 

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf9696ab-d33d-4555-93d7-5423bcd98f33" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/php/Jugar.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/SW.iml" afterPath="$PROJECT_DIR$/.idea/SW.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/EliminarPregunta.php" afterPath="$PROJECT_DIR$/php/EliminarPregunta.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,16 +22,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layoutUser.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/layoutUser.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="RevisarPreguntas.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/RevisarPreguntas.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,8 +49,18 @@
       <file leaf-file-name="GestionPreguntas.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/GestionPreguntas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="185" column="61" lean-forward="true" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="61" />
+            <state relative-caret-position="753">
+              <caret line="185" column="61" lean-forward="false" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="61" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jugar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/php/Jugar.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -68,10 +70,20 @@
         <entry file="file://$PROJECT_DIR$/php/GetPreguntaByid.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
-              <caret line="4" column="52" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="52" />
+              <caret line="4" column="52" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="52" />
               <folding>
                 <marker date="1512043156000" expanded="true" signature="97:130" ph="Select * fro... Pregunta" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layoutUser.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/layoutUser.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EliminarPregunta.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EliminarPregunta.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/EliminarPregunta.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -114,22 +126,8 @@
         <entry file="file://$PROJECT_DIR$/html/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="226">
-              <caret line="81" column="43" lean-forward="true" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+              <caret line="81" column="43" lean-forward="false" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VerPreguntasConFoto.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/VerPreguntasConFoto.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-              <folding>
-                <marker date="1513703601318" expanded="true" signature="117:139" ph="select * fro... Pregunta" />
-                <marker date="1513703601318" expanded="true" signature="155:265" ph="..." />
-                <marker date="1513703601318" expanded="true" signature="160:212" ph="{...}" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -180,6 +178,7 @@
         <option value="$PROJECT_DIR$/php/GestionPreguntas.php" />
         <option value="$PROJECT_DIR$/php/RevisarPreguntas.php" />
         <option value="$PROJECT_DIR$/php/EliminarPregunta.php" />
+        <option value="$PROJECT_DIR$/php/Jugar.php" />
       </list>
     </option>
   </component>
@@ -199,7 +198,7 @@
   <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP">
     <include_path>
-      <path value="C:\wamp\bin\php\php5.4.3" />
+      <path value="C:\wamp64\bin\php\php5.6.31" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -263,7 +262,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="C:/wamp64/bin/php/php5.6.31" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.HTML" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -323,7 +322,7 @@
       <workItem from="1510594971289" duration="16962000" />
       <workItem from="1512082459983" duration="242000" />
       <workItem from="1512588330553" duration="80000" />
-      <workItem from="1513692129461" duration="6664000" />
+      <workItem from="1513692129461" duration="7646000" />
     </task>
     <task id="LOCAL-00001" summary="php">
       <created>1509439932033</created>
@@ -507,11 +506,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513764658400</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="elimin">
+      <created>1513764755803</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1513764755803</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63089000" />
+    <option name="totallyTimeSpent" value="64071000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -520,6 +526,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19180088" sideWeight="0.48387095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.042121686" sideWeight="0.5146413" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -531,7 +538,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.48243046" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -599,11 +605,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/asier.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/ampq/amqp.php" />
     <entry file="file://$PROJECT_DIR$/html/layout.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -738,6 +739,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -776,6 +778,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -925,14 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/layoutUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/VerPreguntasConFoto.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -948,7 +943,7 @@
     <entry file="file://$PROJECT_DIR$/php/GetPreguntaByid.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="4" column="52" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="52" />
+          <caret line="4" column="52" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="4" selection-end-column="52" />
           <folding>
             <marker date="1512043156000" expanded="true" signature="97:130" ph="Select * fro... Pregunta" />
           </folding>
@@ -966,7 +961,7 @@
     <entry file="file://$PROJECT_DIR$/html/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
-          <caret line="81" column="43" lean-forward="true" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+          <caret line="81" column="43" lean-forward="false" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -978,14 +973,6 @@
           <folding>
             <marker date="1510687294000" expanded="true" signature="97:354" ph="INSERT INTO Pregunta... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/GestionPreguntas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="185" column="61" lean-forward="true" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,6 +1003,30 @@
           <folding>
             <marker date="1513764747161" expanded="true" signature="123:150" ph="Select * fro... Pregunta" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/GestionPreguntas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="185" column="61" lean-forward="false" selection-start-line="185" selection-start-column="14" selection-end-line="185" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/layoutUser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/Jugar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -62,6 +62,19 @@
             $("#revisarPreg").css("visibility","visible");
         }
     })
+
+
+    function getRandom(){
+
+
+       var rnd = Math.floor((Math.random() * 100) + 1);
+       var numRandom = [];
+       if(numRandom.indexOf(rnd)===-1){
+           numRandom.push(rnd);
+
+       }
+
+    }
 </script>
 </body>
 </html>

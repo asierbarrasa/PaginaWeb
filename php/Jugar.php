@@ -71,13 +71,13 @@
         if ($("#1").checked){
             data.append("respuesta",$("#1").value);
         }else if($("#2").checked){
-            data.append("respuesta",$("#1").value);
+            data.append("respuesta",$("#2").value);
 
         }else if($("#3").checked)  {
-            data.append("respuesta",$("#1").value);
+            data.append("respuesta",$("#3").value);
 
         }else if($("#4").checked){
-            data.append("respuesta",$("#1").value);
+            data.append("respuesta",$("#4").value);
 
         }else{
             $("#respuesta").html("Ninguna respuesta selecionada");

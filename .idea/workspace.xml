@@ -4,7 +4,6 @@
     <list default="true" id="cf9696ab-d33d-4555-93d7-5423bcd98f33" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/php/Corregir.php" afterPath="$PROJECT_DIR$/php/Corregir.php" />
-      <change beforePath="$PROJECT_DIR$/php/Jugar.php" afterPath="$PROJECT_DIR$/php/Jugar.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,18 +20,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RevisarPreguntas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/php/RevisarPreguntas.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="121" column="62" lean-forward="true" selection-start-line="120" selection-start-column="12" selection-end-line="121" selection-end-column="62" />
-              <folding>
-                <marker date="1513769635999" expanded="true" signature="3242:3264" ph="select * fro... Pregunta" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GetPreguntaByid.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/GetPreguntaByid.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -57,15 +44,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Corregir.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Corregir.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/Corregir.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            <state relative-caret-position="289">
+              <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
               <folding>
-                <marker date="1513776775382" expanded="true" signature="130:163" ph="Select respC... Pregunta" />
-                <marker date="1513776775382" expanded="true" signature="130:164" ph="Select respC... Pregunta" />
+                <marker date="1513777313207" expanded="true" signature="148:181" ph="Select respC... Pregunta" />
+                <marker date="1513777313207" expanded="true" signature="148:191" ph="Select respC... Pregunta" />
+                <marker date="1513777313207" expanded="true" signature="148:192" ph="Select respC... Pregunta" />
+                <marker date="1513777313207" expanded="true" signature="148:200" ph="Select respC... Pregunta" />
+                <marker date="1513777313207" expanded="true" signature="148:238" ph="Select respC... Pregunta" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Control.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/Control.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,8 +95,8 @@
       <file leaf-file-name="EliminarPregunta.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/EliminarPregunta.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
               <folding>
                 <marker date="1513767987862" expanded="true" signature="116:156" ph="DELETE from Pregunta... " />
               </folding>
@@ -126,7 +126,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Jugar.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Jugar.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/Jugar.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="474">
@@ -186,8 +186,8 @@
         <option value="$PROJECT_DIR$/php/EliminarPregunta.php" />
         <option value="$PROJECT_DIR$/php/GestionPreguntas.php" />
         <option value="$PROJECT_DIR$/php/RevisarPreguntas.php" />
-        <option value="$PROJECT_DIR$/php/Corregir.php" />
         <option value="$PROJECT_DIR$/php/Jugar.php" />
+        <option value="$PROJECT_DIR$/php/Corregir.php" />
       </list>
     </option>
   </component>
@@ -646,11 +646,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513773280085</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="corregir">
+      <created>1513776935179</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1513776935179</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69647000" />
+    <option name="totallyTimeSpent" value="70038000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -733,7 +740,8 @@
     <MESSAGE value="Eliminar" />
     <MESSAGE value="Eliminar pregunta" />
     <MESSAGE value="elimin" />
-    <option name="LAST_COMMIT_MESSAGE" value="elimin" />
+    <MESSAGE value="corregir" />
+    <option name="LAST_COMMIT_MESSAGE" value="corregir" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -920,7 +928,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1513776858319" expanded="true" signature="62879:62896" ph="..." />
+            <marker date="1513777009490" expanded="true" signature="62996:63013" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1002,14 +1010,6 @@
           <folding>
             <element signature="n#style#0;n#span#4;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/Control.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1135,16 +1135,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/EliminarPregunta.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <marker date="1513767987862" expanded="true" signature="116:156" ph="DELETE from Pregunta... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/creditosUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1171,22 +1161,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/Corregir.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <marker date="1513776775382" expanded="true" signature="130:163" ph="Select respC... Pregunta" />
-            <marker date="1513776775382" expanded="true" signature="130:164" ph="Select respC... Pregunta" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/Jugar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="104" column="7" lean-forward="true" selection-start-line="104" selection-start-column="7" selection-end-line="104" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/Control.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/EliminarPregunta.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding>
+            <marker date="1513767987862" expanded="true" signature="116:156" ph="DELETE from Pregunta... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/Corregir.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+          <folding>
+            <marker date="1513777313207" expanded="true" signature="148:181" ph="Select respC... Pregunta" />
+            <marker date="1513777313207" expanded="true" signature="148:191" ph="Select respC... Pregunta" />
+            <marker date="1513777313207" expanded="true" signature="148:192" ph="Select respC... Pregunta" />
+            <marker date="1513777313207" expanded="true" signature="148:200" ph="Select respC... Pregunta" />
+            <marker date="1513777313207" expanded="true" signature="148:238" ph="Select respC... Pregunta" />
+          </folding>
         </state>
       </provider>
     </entry>

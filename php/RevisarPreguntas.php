@@ -70,7 +70,7 @@
     var r=  "<?php
       $link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
       $datos = mysqli_query($link, "select * from Pregunta");
-      
+
       while($row = mysqli_fetch_array($datos)){
     echo "<option>$row[id]</option>";}
     ?>";
@@ -103,7 +103,7 @@ $("#ids").change(function(){
 
 });
    </script>
-   
+
 
     <script>
         function formatInput(id){
@@ -112,8 +112,8 @@ $("#ids").change(function(){
           }
           return $("#"+id).val();
         }
-        
-        
+
+
         $("#btn").click(function(event){
             event.preventDefault();
             var data = new FormData();
@@ -151,11 +151,10 @@ $("#ids").change(function(){
         });
 
         $("#btnEliminar").click(function(){
+          var data = new FormData();
+      data.append("id", $("#ids option:selected").val());
             $.ajax({
-
-                var data = new FormData();
-            data.append("id", $("#ids option:selected").val());
-            url:"EliminarPregunta.php",
+                url:"EliminarPregunta.php",
                 type:'POST',
                 processData: false,
                 cache: false,
@@ -168,7 +167,7 @@ $("#ids").change(function(){
         });
         });
 
-        
+
 
     </script><script>
     $(document).ready(function(){

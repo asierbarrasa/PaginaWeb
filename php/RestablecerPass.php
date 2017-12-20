@@ -1,13 +1,10 @@
 <?php
-$emailcryp = $_GET["cod"];
-$email = decrypt($emailcryp,"EmailQueTieneQueRecuperar");
+$email = $_GET["email"];
 $link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
-
-$sql = "Select 'email' FROM Users Where email = $email";
+$sql = "Select * FROM Users Where email = "."'$email'";
 $result = mysqli_query($link, $sql);
-$row = mysqli_fetch_assoc($result);
-if(mysqli_num_rows ($result)!=1){
-  header('Location: adiazdeotazu.000webhostapp.com/web/html/layout.html');
+if(!$result){
+header('Location: ../html/layout.html');
 }
  ?>
 
@@ -28,14 +25,14 @@ if(mysqli_num_rows ($result)!=1){
 
    <div id='page-wrap'>
      <header class='main' id='h1'>
-       <span class="right"><a href="registro.html">Registrarse</a></span>
-       <span class="right"><a href="login.html">Login</a></span>
+       <span class="right"><a href="../html/registro.html">Registrarse</a></span>
+       <span class="right"><a href="../html/login.html">Login</a></span>
        <span class="right" style="display:none;"><a href="/logout">Logout</a></span>
        <h2>Quiz: el juego de las preguntas</h2>
      </header>
      <nav class='main' id='n1' role='navigation'>
-       <span><a href='layout.html'>Inicio</a></span>
-       <span><a href='creditos.html'>Creditos</a></span>
+       <span><a href='../html/layout.html'>Inicio</a></span>
+       <span><a href='../html/creditos.html'>Creditos</a></span>
      </nav>
 
 
@@ -61,10 +58,11 @@ if(mysqli_num_rows ($result)!=1){
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
    <script>
    $("#frecuperar").submit(function(event){
-     event.preventDefault;
+     event.preventDefault();
      if ($("#pass1").val()==$("#pass2").val()){
        var data = new FormData();
        data.append("pass",$("#pass1").val());
+       data.append("email", "<?php echo $_GET["email"]; ?>");
        $.ajax({
          url:"ActualizarPass.php",
          type:'POST',

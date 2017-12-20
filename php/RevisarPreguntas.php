@@ -52,6 +52,8 @@
 
       <h5 id="LetraPequeña">*Los campos que no se modifiquen se enviaran con el valor anterior </h5>
 
+        <div id="feebback"></div>
+
 
     </section>
 
@@ -152,23 +154,15 @@ $("#ids").change(function(){
             $.ajax({
 
                 var data = new FormData();
-            data.append("id", $("#ids").val());
+            data.append("id", $("#ids option:selected").val());
             url:"EliminarPregunta.php",
                 type:'POST',
                 processData: false,
                 cache: false,
                 contentType: false,
                 success: function(e){
-                $.ajax({
-                    url:"VerPreguntasConFoto.php",
-                    type:'POST',
-                    processData: false,
-                    cache: false,
-                    contentType: false,
-                    success: function(e){
-                        $("#ajax").html(e);
-                    }
-                });
+                $("#feebback").html("Pregunta Eliminada correctamente.");
+
             });
         }
         });

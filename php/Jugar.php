@@ -62,6 +62,19 @@
             $("#revisarPreg").css("visibility","visible");
         }
     })
+    $("#corregir").click(function(){
+        $.ajax({
+            url:"Corregir.php",
+            type:'POST',
+            processData: false,
+            cache: false,
+            contentType: false,
+            success: function(e){
+                $("#ajax").html(e);
+            }
+        });
+    });
+
 </script>
 </body>
 </html>

@@ -1,3 +1,31 @@
+
+Skip to content
+This repository
+
+Pull requests
+Issues
+Marketplace
+Explore
+
+@asierbarrasa
+
+1
+0
+
+0
+
+asierbarrasa/PaginaWeb
+Code
+Issues 0
+Pull requests 0
+Projects 0
+Wiki
+Insights
+Settings
+PaginaWeb/php/GestionPreguntas.php
+a539183 16 hours ago
+@asierbarrasa asierbarrasa Eliminar pregunta
+259 lines (208 sloc) 7.65 KB
 <
 <!DOCTYPE html>
 <html>
@@ -20,13 +48,13 @@
         <h2>Quiz: el juego de las preguntas</h2>
     </header>
     <nav class='main' id='n1' role='navigation'>
-       <span><a href='layoutUser.php'>Inicio</a></span>
-      <span><a href='GestionPreguntas.php'>Gestionar Preguntas</a></span>
+        <span><a href='layoutUser.php'>Inicio</a></span>
+        <span><a href='GestionPreguntas.php'>Gestionar Preguntas</a></span>
         <span><a href ='ObtenerDatos.php'>Consultar usuarios</a></span>
         <span><a href='ObtenerPreguntaUI.php'>Obtener Preguntas UI</a></span>
         <span id="revisarPreg" style="visibility: hidden;"><a href='RevisarPreguntas.php'>Revisar Preguntas</a></span>
 
-      <span><a href='creditosUser.php'>Creditos</a></span>
+        <span><a href='creditosUser.php'>Creditos</a></span>
 
 
     </nav>
@@ -61,11 +89,11 @@
                 <div id="numUsuarios"></div>
             </form>
             <div>
-            <div id="contPreg">
+                <div id="contPreg">
 
 
 
-            </div>
+                </div>
                 <img src="" id="imagen" width="140px" height="140px">
 
             </div>
@@ -83,84 +111,72 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
-
-
-
     $(document).ready(function(){
         $("#contPreg").html("<img src='../assets/Imagenes/carga.gif' heigth='50px' width='50px'>");
         setInterval(function(){getNumPregUs()},10000);
         setInterval(function(){getNumUsuarios()},10000);
-
     });
-
     $("#fpreguntas").submit(function(e){
-
-      e.preventDefault();
-       if (!requiredField("email")) {
-         alert("Introuce un email")
-         e.preventDefault();
-       }else if(!validateEmail()){
-         alert("Introduce un email valido")
         e.preventDefault();
-       }else if (!requiredField("preg") ) {
-           alert("Introduce una pregunta")
-           e.preventDefault();
-       }else if (!validarPregunta()) {
-         alert("Introduce una pregunta de al menos 10 caracteres")
-         e.preventDefault();
-       }else if (!requiredField("respC")) {
-           alert("Introduce una respuesta correcta")
-           e.preventDefault();
-       }else if (!requiredField("respI1")) {
-           alert("Campo Respuesta 1 requerido")
-           e.preventDefault();
-       }else if (!requiredField("respI2")) {
-           alert("Campo Respuesta2 requerido")
-           e.preventDefault();
-       }else if (!requiredField("respI3")) {
-           alert("Campo respuesta 3 requerido")
-           e.preventDefault();
-       }else if (!requiredField("compl")) {
-         alert("Introduce una complejidad")
-       }else if (!validarCompl()) {
-         alert("Introduce un numero entre el 1 y el 5")
-         e.preventDefault();
-       }else if (!requiredField("tema")) {
-         alert("Introduce un tema")
-         e.preventDefault();
-       }else {
-
-         var data = new FormData(this);
-
-         $.ajax({
-           url: "InsertarPreguntaConFoto.php",
-           type: 'POST',
-           data: data,
-           processData: false,
-           cache: false,
-           contentType: false,
-           success: function(e){
-             $("#ajax").html(e);
-           }
-         });
-       }
-     });
-
-     $("#btnPreguntas").click(function(){
-       $.ajax({
-         url:"VerPreguntasConFoto.php",
-         type:'POST',
-         processData: false,
-         cache: false,
-         contentType: false,
-         success: function(e){
-           $("#ajax").html(e);
-         }
-       });
-     });
-
-
-
+        if (!requiredField("email")) {
+            alert("Introuce un email")
+            e.preventDefault();
+        }else if(!validateEmail()){
+            alert("Introduce un email valido")
+            e.preventDefault();
+        }else if (!requiredField("preg") ) {
+            alert("Introduce una pregunta")
+            e.preventDefault();
+        }else if (!validarPregunta()) {
+            alert("Introduce una pregunta de al menos 10 caracteres")
+            e.preventDefault();
+        }else if (!requiredField("respC")) {
+            alert("Introduce una respuesta correcta")
+            e.preventDefault();
+        }else if (!requiredField("respI1")) {
+            alert("Campo Respuesta 1 requerido")
+            e.preventDefault();
+        }else if (!requiredField("respI2")) {
+            alert("Campo Respuesta2 requerido")
+            e.preventDefault();
+        }else if (!requiredField("respI3")) {
+            alert("Campo respuesta 3 requerido")
+            e.preventDefault();
+        }else if (!requiredField("compl")) {
+            alert("Introduce una complejidad")
+        }else if (!validarCompl()) {
+            alert("Introduce un numero entre el 1 y el 5")
+            e.preventDefault();
+        }else if (!requiredField("tema")) {
+            alert("Introduce un tema")
+            e.preventDefault();
+        }else {
+            var data = new FormData(this);
+            $.ajax({
+                url: "InsertarPreguntaConFoto.php",
+                type: 'POST',
+                data: data,
+                processData: false,
+                cache: false,
+                contentType: false,
+                success: function(e){
+                    $("#ajax").html(e);
+                }
+            });
+        }
+    });
+    $("#btnPreguntas").click(function(){
+        $.ajax({
+            url:"VerPreguntasConFoto.php",
+            type:'POST',
+            processData: false,
+            cache: false,
+            contentType: false,
+            success: function(e){
+                $("#ajax").html(e);
+            }
+        });
+    });
     $("#fileInput").change(function(){
         var exp = $("#fileInput")[0].files;
         console.log(exp);
@@ -172,10 +188,7 @@
         };
         reader.readAsDataURL(exp[0]);
     });
-
-
     function getNumPregUs() {
-
         $.ajax({
             url: "ContadorPreguntasUsuario.php?email=<?php echo $_SESSION["email"]?>",
             type: 'GET',
@@ -187,65 +200,50 @@
             }
         });
     }
-
-
     function getNumUsuarios()
-{
-   var xmlhttp = new XMLHttpRequest();
-   xmlhttp.onreadystatechange=function()
-   {
-       if (xmlhttp.readyState==4 && xmlhttp.status==200)
-       {document.getElementById("numUsuarios").innerHTML="Usuarios activos: "+xmlhttp.responseText; }
-   }
-
-
-       xmlhttp.open("GET","verUsuariosActivos.php",true);
-       xmlhttp.send();
-   }
-
-
-
-
-
+    {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function()
+        {
+            if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {document.getElementById("numUsuarios").innerHTML="Usuarios activos: "+xmlhttp.responseText; }
+        }
+        xmlhttp.open("GET","verUsuariosActivos.php",true);
+        xmlhttp.send();
+    }
     function validateEmail(){
-      var email=$("#email").val();
-      var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|eus]");
-      var rta=er1.test(email);
-      console.log(rta)
-      return rta;
+        var email=$("#email").val();
+        var er1= new RegExp("[a-z]*[0-9]{3}@ikasle.ehu.[es|eus]");
+        var rta=er1.test(email);
+        console.log(rta)
+        return rta;
     }
-
     function requiredField(id){
-      var var1=$("#"+id).val();
-      if (var1=="") {
-        console.log("FAIL")
-        return false;
-      }else {
-        console.log("OK")
-        return true;
-      }
+        var var1=$("#"+id).val();
+        if (var1=="") {
+            console.log("FAIL")
+            return false;
+        }else {
+            console.log("OK")
+            return true;
+        }
     }
-
     function validarPregunta(){
-      var pregunta =$("#preg").val();
-      if (pregunta.length<10) {
-        return false;
-      }else {
-        return true;
-      }
+        var pregunta =$("#preg").val();
+        if (pregunta.length<10) {
+            return false;
+        }else {
+            return true;
+        }
     }
-
-
     function validarCompl(){
-      var compl=$("#compl").val();
-      if (compl>=1 && compl <=5) {
-        return true;
-      } else {
-        return false;
-      }
+        var compl=$("#compl").val();
+        if (compl>=1 && compl <=5) {
+            return true;
+        } else {
+            return false;
+        }
     }
-
-
 </script>
 <script>
     $(document).ready(function(){

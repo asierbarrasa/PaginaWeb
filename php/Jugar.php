@@ -42,6 +42,8 @@
             <input type="radio" name="respuesta" value=""><br>
             <input type="radio" name="respuesta" value="">
             </div>
+            <br><br>
+            <label id="respuesta"></label>
 
             <input type="button" value="Corregir" id="corregir"><br>
             <input type="button" value="Siguiente" id="siguiente">
@@ -70,7 +72,7 @@
             cache: false,
             contentType: false,
             success: function(e){
-                $("#ajax").html(e);
+                $("#respuesta").html(e);
             }
         });
     });

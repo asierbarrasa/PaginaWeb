@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf9696ab-d33d-4555-93d7-5423bcd98f33" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/php/PuntuarPregunta.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/Jugar.php" afterPath="$PROJECT_DIR$/php/Jugar.php" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -71,7 +69,7 @@
       <file leaf-file-name="Jugar.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/Jugar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1460">
+            <state relative-caret-position="-223">
               <caret line="108" column="22" lean-forward="false" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
               <folding>
                 <marker date="1513855275643" expanded="true" signature="4723:4745" ph="select * fro... Pregunta" />
@@ -675,11 +673,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513779922478</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="jugar">
+      <created>1513855287615</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1513855287615</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73988000" />
+    <option name="totallyTimeSpent" value="75310000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -763,7 +768,8 @@
     <MESSAGE value="Eliminar pregunta" />
     <MESSAGE value="elimin" />
     <MESSAGE value="corregir" />
-    <option name="LAST_COMMIT_MESSAGE" value="corregir" />
+    <MESSAGE value="jugar" />
+    <option name="LAST_COMMIT_MESSAGE" value="jugar" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -928,7 +934,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1513854845004" expanded="true" signature="64234:64251" ph="..." />
+            <marker date="1513856065548" expanded="true" signature="65602:65619" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1222,7 +1228,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/Jugar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1460">
+        <state relative-caret-position="-223">
           <caret line="108" column="22" lean-forward="false" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
           <folding>
             <marker date="1513855275643" expanded="true" signature="4723:4745" ph="select * fro... Pregunta" />

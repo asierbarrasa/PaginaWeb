@@ -44,9 +44,12 @@
             </div>
             <br><br>
             <label id="respuesta"></label>
+            <label id="puntuacion"></label>
 
             <input type="button" value="Corregir" id="corregir"><br>
-            <input type="button" value="Siguiente" id="siguiente">
+            <input type="button" value="Siguiente" id="siguiente"><br>
+            <input type="button" value="Like" id="like"><br>
+            <input type="button" value="Dislike" id="dislike"><br>
 
 
 
@@ -72,13 +75,10 @@
             data.append("respuesta",$("#1").value);
         }else if($("#2").checked){
             data.append("respuesta",$("#2").value);
-
         }else if($("#3").checked)  {
             data.append("respuesta",$("#3").value);
-
         }else if($("#4").checked){
             data.append("respuesta",$("#4").value);
-
         }else{
             $("#respuesta").html("Ninguna respuesta selecionada");
         }
@@ -99,6 +99,51 @@
                 }
             }
         });
+    });
+
+    $("#like").click(function(){
+
+        $.ajax({
+
+            url:'PuntuarPregunta.php',
+            type:'POST',
+            processData: false,
+            cache: false,
+            contentType: false,
+            success: function(e){
+
+                    $("#puntuacion").html("Gracias por tu like");
+
+            }
+        });
+    });
+    $("#dislike").click(function(){
+
+        $.ajax({
+
+            url:'PuntuarPregunta.php',
+            type:'POST',
+            processData: false,
+            cache: false,
+            contentType: false,
+            success: function(e){
+
+                $("#puntuacion").html("Vaya... esperemos que la siguiente pregunta te guste mas...");
+
+            }
+        });
+    });
+
+
+    //Suffle de las preguntas
+    $(document).ready(function(){
+        var r=  "<?php
+            $link = mysqli_connect("localhost", "id2921858_swg26","SWG26","id2921858_quiz");
+            $datos = mysqli_query($link, "select * from Pregunta");
+            suffle($datos);
+            ?>";
+        console.log(r);
+
     });
 
 </script>
